@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!-- lololo -->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The S.C.R.I.P.T Group</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- W3.CSS  -->
+	<link rel="stylesheet" href="css/w3.css">
+	 <!-- Font Awesome -->
+	<link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .9;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">S.C.R.I.P.T</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="index.html"><span>Home</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	    </header>
+	<br><br>    
+	<section id="fh5co-about" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Members</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/Aniket.png" alt="Image"></figure>
+						<h3>Aniket Raj</h3>
+						<span class="fh5co-position">President</span>
+						<p>Winner of Ready Set Code '18, and our Techo Lecturer. Aniket brings out the best of the team with his wide-ranging skills, but is still immature with his love for Spider-Man.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/aniket_spidey" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://aniketraj.netlify.com" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="https://www.github.com/aniket-spidey" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/Ritom.png" alt="Image"></figure>
+						<h3>Ritom Gupta</h3>
+						<span class="fh5co-position">Chairman and Co-founder</span>
+						<p>The crazy, yet sensible founder of S.C.R.I.P.T. Ritom manages the team in all activities, and is the guy behind our administration, designs, website, and Ready Set Code !</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/monsieur_rittman/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://rightonrittman.wordpress.com/" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="https://www.github.com/rightonrittman" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/Vignesh.PNG" alt="Image"></figure>
+						<h3>Vignesh Iyer</h3>
+						<span class="fh5co-position">Co-Founder and Joint Treasurer</span>
+						<p>The silent and dependable founder of S.C.R.I.P.T. Vignesh is our finance head and chief advisor. That he spends time on Quora, should suffice for this caption !</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/the_viggyboy/" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://twitter.com/logical_vhi?s=08" target="_blank"><i class="icon-twitter" target="_blank"></i></a></li>
+							<li><a href="https://github.com/vigu184" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row"><br /><br /><br /></div>
+
+			<!-- New row 2-->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/kashyap.JPG" alt="Image"></figure>
+						<h3>Kashyap Kale</h3>
+						<span class="fh5co-position">Person of Contact</span>
+						<p>Beware,He may come for your password! A cyber security enthusiast, camera supplier and PR guy. Kashyap is the reason people receive our email and messages.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/kashyapkale" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/kashyap-kale-a71398151" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.twitter.com/Meetkashyapkale" target="_blank"><i class="icon-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/kartik.jpg" alt="Image"></figure>
+						<h3>Kartik Gupta</h3>
+						<span class="fh5co-position">General Secretary</span>
+						<p>Convincing people and managing registrations - Kartik is our management backbone! He is very determined, and shows immense skills when it comes to management </p>
+						<ul class="social social-circle">
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/alok.jpg" alt="Image"></figure>
+						<h3>Alok Bhawankar</h3>
+						<span class="fh5co-position">Joint Treasurer</span>
+						<p>Anime freak and hacker with a pretty much non-functional laptop - Alok is our Kali Linux sensei. He’s on Parrot  though.. </p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/the_alpha29/" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/alok-bhawankar-122887148/" target="_blank"><i class="fab fa-linkedin" target="_blank"></i></a></li>
+							<li><a href="https://github.com/alrocks29" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row"><br /><br /><br /></div>
+
+			<!-- New row 3-->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/ksdfg.jpg" alt="Image"></figure>
+						<h3>Kshitish Deshpande</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>The shy, yet overconfident otaku of S.C.R.I.P.T - Kshitish coordinates the team in our events. And is an anime fan! Weirdly obsessed with cats though…</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.reddit.com/user/rc1247" target="_blank"><i class="fab fa-reddit"></i></a></li>
+							<li><a href="https://www.facebook.com/KSD.RULES" target="_blank"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="https://github.com/ksdfg" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/pratik.JPG" alt="Image"></figure>
+						<h3>Pratik Gorade</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>Knows nothing yet can tell you anything - Pratik considers himself a zero, that's why he's a hero! He's our installation head and an avid gamer!</p>
+						<ul class="social social-circle">
+							<li><a href="https://instagram.com/prk_prime" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://twitter.com/pratik_gorade" target="_blank"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://github.com/prkprime" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/pranav.PNG" alt="Image"></figure>
+						<h3>Pranav Bakre</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>Tech lover, pretty much stuck in OS and trivia - Pranav is our installation guru, and our most straightforward member !</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/bakrepranav/" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/pranav-bakre-32982118a/" target="_blank"><i class="fab fa-linkedin" target="_blank"></i></a></li>
+							<li><a href="https://github.com/PranavBakre" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row"><br /><br /><br /></div>
+			<!-- New row 4-->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/akhil.PNG" alt="Image"></figure>
+						<h3>Akhil Narang</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>Pizza lover, and GitHub pusher - Akhil is our Hulk in size and The Flash in coding !</p>
+						<ul class="social social-circle">
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/Aditya.png" alt="Image"></figure>
+						<h3>Aditya Desai</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>Debugger and Japanese maniac - Aditya cannot sleep, with his code full of bugs!</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/aditya_._desai/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/aditya-desai-3443a5158/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="https://github.com/AdityaDesai-99" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/vishwa.jpg" alt="Image"></figure>
+						<h3>Vishwa Singh</h3>
+						<span class="fh5co-position">Core Member</span>
+						<p>Non-social and awesome - Vishwa is our 'world' of fun. We always find him with his headphones!</p>
+						<ul class="social social-circle">
+							<li><a href="#" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://www.facebook.com/vishwa.singh.3557" target="_blank"><i class="fab fa-facebook" target="_blank"></i></a></li>
+							<li><a href="https://github.com/SAint7579" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row"><br /><br /><br /></div>
+			<!-- New row 5-->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/parikshit.jpg" alt="Image"></figure>
+						<h3>Parikshit Gupta</h3>
+						<span class="fh5co-position">Tech Member</span>
+						<p>Beware,He may come for your password! A cyber security enthusiast, camera supplier and PR guy. Kashyap is the reason people receive our email and messages.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/parikshitgupta.in/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.parikshitgupta.in" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="https://github.com/parikshitgupta1" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/akshada.jpg" alt="Image"></figure>
+						<h3>Akshada Pradhan</h3>
+						<span class="fh5co-position">Management</span>
+						<p>Meet Akshada. She's a part of our management team, writes our blogs and loves reading about the fall of Lehman brothers in her free time.</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/akshprad" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/akshada-pradhan-300a29136" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.github.com/rightonrittman" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/sanskruti.jpeg" alt="Image"></figure>
+						<h3>Sanskruti Raut</h3>
+						<span class="fh5co-position">Management</span>
+						<p>The creative one of our team, Sanskruti has leadership qualities, and performs well under pressure. Also, you can have a good conversation when it comes to GOT :D</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/fiery_snowflake/" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://www.instagram.com/artlust_1417/" target="_blank"><i class="fas fa-palette" target="_blank"></i></a></li>
+							<li><a href="https://www.facebook.com/sanskruti.raut.961" target="_blank"><i class="fab fa-facebook" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row"><br /><br /><br /></div>
+			<!-- New row 6-->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/devesh.jpg" alt="Image"></figure>
+						<h3>Devesh Bhogre</h3>
+						<span class="fh5co-position">Management</span>
+						<p>A passionate coder, with a knack for management. Devesh can manage all the events, and has a great contact when it comes to merchandise :) </p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/iam_db9/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/devesh-bhogre-953b02b3" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.twitter.com/DBhogre" target="_blank"><i class="icon-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/kartik.jpg" alt="Image"></figure>
+						<h3>Pragati Jagdale</h3>
+						<span class="fh5co-position">Management</span>
+						<p>Convincing people and managing registrations - Kartik is our management backbone! He is very determined, and shows immense skills when it comes to management</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/pragati_jagdale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fas fa-globe-asia"></i></a></li>
+							<li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="images/rishabh.jpeg" alt="Image"></figure>
+						<h3>Rishabh Saraswat</h3>
+						<span class="fh5co-position">Management</span>
+						<p>The silent and dependable founder of S.C.R.I.P.T. Vignesh is our finance head and chief advisor. That he spends time on Quora, should suffice for this caption !</p>
+						<ul class="social social-circle">
+							<li><a href="https://www.instagram.com/rishabhsaraswat19" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+							<li><a href="https://www.facebook.com/rishab.saraswat.9" target="_blank"><i class="fab fa-facebook" target="_blank"></i></a></li>
+							<li><a href="#" target="_blank"><i class="icon-github" target="_blank"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+	
+
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Get In Touch</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Hello? Hello? Hello? Is there anybody in there? Just nod if you can hear me. Is there anyone at home? </h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md w3-center w3-container">
+				<div class="col-md-12 to-animate w3-left">
+					<h3>Contact Info</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<span class="fas fa-home">&nbsp&nbsp</span>MIT World Peace University, Pune, <br>Maharashtra, India
+						</li>
+						<li><span class="icon-phone">&nbsp&nbsp</span>8200132410</li>
+						<li><span class="icon-envelope">&nbsp&nbsp</span>script.mailus@gmail.com</li>
+					</ul>
+				</div>
+
+				</div>
+
+			</div>
+		</div>
+			</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop w3-text-black">To<i class="icon-arrow-up2">Top</i></a>
+		<div class="container">
+		<br>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://www.facebook.com/thescriptgroup/" target="_blank"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://www.instagram.com/script.ig/" target="_blank"><i class="icon-instagram"></i></a></li>
+						<li><a href="https://github.com/The-SCRIPT-Group/" target="_blank"><i class="icon-github"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="js/jquery.style.switcher.js"></script>
+	<script>
+		var winWidth  = 0;
+		$(window).resize(function() {
+			winWidth = $(window).width();
+			if(winWidth <= 768) {
+				$(".hide-card").css("display", "none");
+			}
+			else {
+				$(".hide-card").css("display", "block");
+			}
+		});
+		$(".soon").css("background-color", "gray");
+		$(".soon").hover(function() { 
+			$(this).css("background-color","gray")
+		});
+		$(function(){
+			$('#colour-variations ul').styleSwitcher({
+				defaultThemeId: 'theme-switch',
+				hasPreview: false,
+				cookie: {
+		          	expires: 30,
+		          	isManagingLoad: true
+		      	}
+			});	
+			$('.option-toggle').click(function() {
+				$('#colour-variations').toggleClass('sleep');
+			});
+		});
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
