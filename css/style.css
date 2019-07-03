@@ -1263,8 +1263,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgb(0, 0, 0);
 }
 .btn:hover, .btn:active, .btn:focus {
-  background: white !important;
-  color: black;
+  background: black;
+  color: white;
   outline: none !important;
 }
 .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
@@ -1502,5 +1502,15 @@ h1, h2, h3, h4, h5, h6 {
 .soon:hover {
   animation: none;
   background: black;
+}
+
+#topbutton:hover {
+  background: white;
+  color: black;
+}
+
+#bottombutton:hover {
+  background: black;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
