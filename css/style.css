@@ -5,6 +5,27 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: scriptlogo;
+  src: url("../fonts/sackers-gothic-light/SackersGothicStd-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: bracketlogo;
+  src: url("../fonts/calibri/Calibri.ttf");
+}
+
+#head {
+  font-family: scriptlogo;
+  font-size: 20px;
+}
+
+.brackets {
+  font-family: bracketlogo;
+  font-size: 25px;
+  color: red;
+}
 /* =======================================================
 *
 * 	Template Style 
