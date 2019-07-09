@@ -390,16 +390,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-home {
-  height: 400px;
-  width: 100%;
+  background-color: transparent;
+  background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   position: relative;
-  background-color: black;
+  width: 100%;
+  background-color: #52d3aa;
   color: #fff;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #fh5co-home .gradient {
   position: absolute;
@@ -447,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px dashed white;
 }
 #fh5co-home .text-inner h1 {
-  font-size: 40px;
+  font-size: 45px;
   color: white;
   margin: 0 0 20px 0;
 }

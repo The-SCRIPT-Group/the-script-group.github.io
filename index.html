@@ -217,14 +217,14 @@
 		  </div>
 	</header>
 
-	<div id="fh5co-home" style="background-image: url(images/LogoB.png);">
+	<div id="fh5co-home" style="background-image: url(images/techo31.jpg);">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">Leading Tech-Driven Club of MIT-WPU</h1>
+							<h1 class="to-animate change-size">Leading Tech-Driven Club of MIT-WPU</h1>
 							<a href="https://the-script-group.herokuapp.com/" target="_blank"><button class="btn btn-8 btn-8a to-animate" id = "topbutton">Register here</button></a>
 						</div>
 					</div>
@@ -637,9 +637,11 @@
 		$(window).resize(function() {
 			winWidth = $(window).width();
 			if(winWidth <= 768) {
+				$(".change-size").css("font-size", "36px"); 
 				$(".hide-card").css("display", "none");
 			}
 			else {
+				$(".change-size").css("font-size", "64px"); 
 				$(".hide-card").css("display", "block");
 			}
 		});
