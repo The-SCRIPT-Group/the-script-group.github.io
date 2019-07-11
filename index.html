@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -238,17 +237,7 @@
 	<div id="fh5co-intro">
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
-				<div class="fh5co-block to-animate" style="background-image: url(images/rsc.jpeg);">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fas fa-times fa-5x w3-margin-bottom"></i>
-						<h2>Ready Set Code 2019</h2>
-						<p>Registrations have not yet begun for RSC, please check back soon.</p>
-						<p><a class="btn btn-primary soon" disabled>Register!</a></p>
-					</div>
-				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/eh.jpeg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/eh.jpeg);" id = "show">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
@@ -258,7 +247,17 @@
 						<p><a href="https://the-script-group.herokuapp.com/" class="btn btn-primary" target="_blank">Register!</a></p>
 					</div>
 				</div>
-				<div class="fh5co-block to-animate" style="background-image: url(images/problem.jpeg);">
+				<div class="fh5co-block to-animate" style="background-image: url(images/rsc.jpeg);" id = "hide1">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fas fa-times fa-5x w3-margin-bottom"></i>
+						<h2>Ready Set Code 2019</h2>
+						<p>Registrations have not yet begun for RSC, please check back soon.</p>
+						<p><a class="btn btn-primary soon" disabled>Register!</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/problem.jpeg);" id = "hide2">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
@@ -639,6 +638,10 @@
 			if(winWidth <= 768) {
 				$(".change-size").css("font-size", "36px"); 
 				$(".hide-card").css("display", "none");
+				document.getElementById("show").style.order = "1";
+				document.getElementById("hide1").style.order = "2";
+				document.getElementById("hide2").style.order = "3";
+				alert("Chota window");
 			}
 			else {
 				$(".change-size").css("font-size", "64px"); 
@@ -647,7 +650,7 @@
 		});
 		$(".soon").css("background-color", "gray");
 		$(".soon").hover(function() { 
-			$(this).css("background-color","gray")
+			$(this).css("background-color","gray");
 		});
 		$(function(){
 			$('#colour-variations ul').styleSwitcher({
