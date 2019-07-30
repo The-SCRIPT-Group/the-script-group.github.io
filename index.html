@@ -40,7 +40,7 @@
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- W3.CSS  -->
-	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	 <!-- Font Awesome -->
 	<link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 
@@ -210,7 +210,7 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<h1 class="to-animate change-size">Leading Tech-Driven Club of MIT-WPU</h1>
-							<!-- <a href="https://the-script-group.herokuapp.com/" target="_blank"><button class="btn btn-8 btn-8a to-animate" id = "topbutton">Register here</button></a> -->
+							<!-- <a target="_blank"><button class="btn btn-8 btn-8a to-animate" id = "topbutton" onclick="document.getElementById('id01').style.display='block'">Register here</button></a> -->
 						</div>
 					</div>
 				</div>
@@ -219,27 +219,33 @@
 		<div class="slant"></div>
 	</div>
 
+	<!-- <div id="id01" class="w3-modal">
+		<div class="w3-modal-content w3-card-4">
+			<header class="w3-container w3-teal"> 
+				<span onclick="document.getElementById('id01').style.display='none'" 
+				class="w3-button w3-display-topright">&times;</span>
+				<h2>Modal Header</h2>
+			</header>
+			<div class="w3-container">
+				<p>Some text..</p>
+				<p>Some text..</p>
+			</div>
+			<footer class="w3-container w3-teal">
+				<p>Modal Footer</p>
+			</footer>
+		</div>
+  	</div> -->
 
 	<div id="fh5co-intro">
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
-				<div class="fh5co-block to-animate" style="background-image: url(images/eh.jpeg);" id = "show">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fas fa-user-secret fa-5x w3-margin-bottom"></i>
-						<h2>TECHO IV - Ethical Hacking</h2>
-						<p>Registrations for this workshop have ended :(</p>
-						<p><a class="btn btn-primary" target="_blank" disabled>Register!</a></p>
-					</div>
-				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(images/rsc.jpeg);" id = "hide1">
 					<div class="overlay-darker"></div>
 					<div class="overlay"></div>
 					<div class="fh5co-text">
-						<i class="fas fa-times fa-5x w3-margin-bottom"></i>
-						<h2>Ready Set Code 2019</h2>
-						<p>Registrations have not yet begun for RSC, please check back soon.</p>
+						<i class="fas fa-users fa-5x w3-margin-bottom w3-text-red"></i>
+						<h2>Recruitment 2019</h2>
+						<p>Registrations to begin on 1st August, 2019 at 6:00 pm</p>
 						<p><a class="btn btn-primary soon" disabled>Register!</a></p>
 					</div>
 				</div>
@@ -250,6 +256,16 @@
 						<i class="fas fa-times fa-5x w3-margin-bottom"></i>
 						<h2>TECHO V - Problem Solving - II</h2>
 						<p>Registrations have not yet begun for this workshop, please check back soon.</p>
+						<p><a class="btn btn-primary soon" disabled>Register!</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/poster.png);" id = "hide2">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fa fa-question-circle fa-5x w3-margin-bottom"></i>
+						<h2>Upcoming { S.C.R.I.P.T } Event</h2>
+						<p>Patience is a virtue. We will be declaring the next worshop soon :D</p>
 						<p><a class="btn btn-primary soon" disabled>Register!</a></p>
 					</div>
 				</div>
@@ -601,6 +617,8 @@
 					</div>
 				</div>
 					</section>
+
+	
 	
 	
 	<footer id="footer" role="contentinfo">
