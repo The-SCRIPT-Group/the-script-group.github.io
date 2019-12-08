@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="mdb/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="mdb/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="mdb/css/style.css">
+
+    <title></title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white transparency border-bottom border-light" id="transmenu">
+        <div class="container">
+
+            <!-- class="collapse navbar-collapse" id="navcol-1" -->
+            <ul class="nav navbar-nav mr-auto">
+                <!--<style>
+                    #navbar-hover:hover {
+                        background-color: black;
+                    }
+                </style>-->
+                <li class="nav-item" role="presentation">
+                    <a id="navbar-hover" class="nav-link" style="font-family: 'Roboto';"
+                       href=""> <strong> About</strong></a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a id="navbar-hover" class="nav-link" style="font-family: 'Roboto';"
+                       href=""><strong>Prizes</strong></a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a id="navbar-hover" class="nav-link" style="font-family: 'Roboto';"
+                       href=""><strong>Rules</strong></a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a id="navbar-hover" class="nav-link" style="font-family: 'Roboto';"
+                       href=""><strong>Register</strong></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <section style="margin-top: 50px;">
+        <div class="row justify-content-end">
+            <div class="text-center container col-4">
+                <h1 style="font-size: 80px; margin-top: 200px;">>  CodeX   <</h1>
+                <h2>#Coders online</h2>
+                <h2>19 DECEMBER 2019</h2>
+            </div>
+            <div class="col-4 container">
+
+                <form class="my-5 mx-md-5 text-center" id="form-new" action="#!">
+                    <br>
+                    <h3 style="color: white; font-size: 40px;" class="font-weight-bold my-4 pb-1">REGISTER</h3>
+
+                    <div class="col-md-9 ml-5">
+                        <p>Name(required)</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="col-md-9 ml-5">
+                        <p>Email(required)</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter you email" required>
+                    </div>
+                    <div class="col-md-9 ml-5">
+                      <!-- check if 2 persons- logic -->
+                      <p>Name of 2nd person</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter name">
+                    </div>
+                    <div class="col-md-9 ml-5">
+                        <p>Email of 2nd person</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter email">
+                    </div>
+                    <div class="col-md-9 ml-5">
+                      <p>Phone number(required)</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="col-md-9 ml-5">
+                      <p>Whatsapp number(If different)</p>
+                        <input type="" id="new-input" class="form-control mb-4" placeholder="Enter phone number">
+                    </div>
+                    <div class="col-md-9 ml-5">
+                      <p>Department</p>
+                    <select name="department" class="form-control mb-4" id="new-input">
+
+                        <option id="new-input" value="cse" selected>Computer Science and Engineering</option>
+
+                        <option id="new-input" value="ece">Electronics and Communication Engineering</option>
+
+                        <option id="new-input" value="ee">Electrical Engineering</option>
+
+                        <option id="new-input" value="mech">Mechanical Engineering</option>
+
+                        <option id="new-input" value="r&a">Robotics and Automation Engineering</option>
+
+                        <option id="new-input" value="civil">Civil Engineering</option>
+
+                        <option id="new-input" value="chem">Chemical Engineering</option>
+
+                        <option id="new-input" value="polymer">Polymer Engineering</option>
+
+                        <option id="new-input" value="petroleum">Petroleum Engineering</option>
+
+                        <option id="new-input" value="mtech">M.Tech</option>
+
+                        <option id="new-input" value="others">Others</option>
+
+                    </select>
+                      </div>
+                        <div class="col-md-9 ml-5">
+                            <p>Year</p>
+                            <select name="year" class="form-control" id="new-input">
+
+                                <option id="new-input" value="1st" selected>FY</option>
+
+                                <option id="new-input" value="2nd">SY</option>
+
+                                <option id="new-input" value="3rd">TY</option>
+
+                            </select>
+
+                        </div>
+                        <div class="form-check">
+
+                            <label class="form-check-label" for="privpolicy">
+                                By using this service, you hereby consent to our<a href="https://thescriptgroup.in/privacypolicy" class="btn btn-link" role="button">
+                                    Privacy
+
+                                    Policy
+                                </a>.
+                            </label>
+
+                        </div>
+
+                        <input type="text" id="event" name="event" style="visibility: hidden" value="{{ event }}"
+                               contenteditable="false">
+
+                        <input type="text" id="db" name="db" style="visibility: hidden" value="{{ db }}" contenteditable="false">
+
+                        <input type="text" id="date" name="date" style="visibility: hidden" value="{{ date }}"
+                               contenteditable="false">
+
+
+
+                        {% if extra_message %}
+
+                        <input type="text" id="extra_message" name="extra_message" style="visibility: hidden"
+                               value="{{ extra_message }}" contenteditable="false">
+
+                        {% endif %}
+
+
+
+                    <div class="text-center">
+                      <button type="submit" style="margin:auto;display:block" class="btn btn-outline-white btn-rounded my-4 waves-effect"
+                              {% if extra_info %}onClick="document.getElementById('message-display').style.display = 'block';"
+                              {% endif %}>
+
+                          Submit
+
+                      </button><br>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- NAVBAR JAVASCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/-Fixed-Navbar-start-with-transparency-background-BS4-.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
