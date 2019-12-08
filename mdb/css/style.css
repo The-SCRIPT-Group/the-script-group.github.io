@@ -1,0 +1,17 @@
+#form-new{
+    background-color: rgba(11, 158, 136, 0.5);
+    opacity: 0.8;
+    border-radius: 50px;
+    width: 400px;
+}
+
+#new-input{
+    background-color: rgb(11, 158, 136);
+    color: white;
+    border-color: rgb(11, 158, 136);
+}
+
+::placeholder{
+  color: white;
+  opacity: 1;
+}
