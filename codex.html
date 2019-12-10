@@ -16,7 +16,7 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/codex-style.css">
 
-    <title></title>
+    <title>CodeX Registrations</title>
 </head>
 
 <body>
@@ -59,7 +59,7 @@
         <div class="row justify-content-end">
             <div class="text-center container col-4">
                 <h1 style="font-size: 80px; margin-top: 200px;"> &gt; CodeX &lt;</h1> <h2>#Coders online</h2>
-                        <h2>19 DECEMBER 2019</h2>
+                        <h2>19th December, 2019</h2>
             </div>
             <div class="col-4 container">
 
@@ -79,7 +79,6 @@
                             name="email" pattern="^.+@[^\.].*\.[a-z]{2,}$" required>
                     </div>
                     <div class="col-md-9 ml-5">
-                        <!-- check if 2 persons- logic -->
                         <p>Name of 2nd person</p>
                         <input type="" id="new-input" class="form-control mb-4" placeholder="Enter name"
                             name="name_second_person" pattern="^\w[\w, ]+$">
@@ -92,12 +91,12 @@
                     <div class="col-md-9 ml-5">
                         <p>Phone number(required)</p>
                         <input type="" id="new-input" class="form-control mb-4" placeholder="Enter phone number"
-                            name="phone" pattern="[\d]{10}" required>
+                            name="phone" pattern="[\d]{10}" maxlength="10" required>
                     </div>
                     <div class="col-md-9 ml-5">
                         <p>WhatsApp number(If different)</p>
                         <input type="" id="new-input" class="form-control mb-4" placeholder="Enter phone number"
-                            name="whatsapp_number" pattern="[\d]{10}">
+                            name="whatsapp_number" pattern="[\d]{10}" maxlength="10">
                     </div>
                     <div class="col-md-9 ml-5">
                         <p>Department</p>
