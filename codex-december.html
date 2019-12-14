@@ -65,7 +65,24 @@
                     maxlength="10" class="form-control" pattern="[\d]{10}">
                 <hr>
 
-                <select name="department" class="form-control" id="department">
+		<p>First person's department</p>
+                <select name="department" class="form-control" id="department" required>
+                    <option value="cse" selected="">Computer Science and Engineering</option>
+                    <option value="ece">Electronics and Communication Engineering</option>
+                    <option value="ee">Electrical Engineering</option>
+                    <option value="mech">Mechanical Engineering</option>
+                    <option value="r&amp;a">Robotics and Automation Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="chem">Chemical Engineering</option>
+                    <option value="polymer">Polymer Engineering</option>
+                    <option value="petroleum">Petroleum Engineering</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="others">Others</option>
+                </select>
+                <hr>
+
+		<p>Second person's department (if team)</p>
+                <select name="department_2" class="form-control" id="department" required>
                     <option value="cse" selected="">Computer Science and Engineering</option>
                     <option value="ece">Electronics and Communication Engineering</option>
                     <option value="ee">Electrical Engineering</option>
