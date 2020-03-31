@@ -41,40 +41,40 @@
                 <h2>19 DECEMBER 2019</h2>
             </div> -->
             <div class="row">
-            <div class="col-7 container img">
-                <img src="images/battleofvarslogo.png" style="width: 480px;height: 270px;margin-top:100px;" alt="">
+            <div class="col-lg-7 container img">
+                <img class="logo-align" src="images/battleofvarslogo.png" style="width: 480px;height: 270px;margin-top:100px;" alt="">
                 <h5 style="left: 7em; position: absolute;">My Name is Peter Parker and this is my<br>CatchPhrase</h5>
             </div>
-            <div class="col-5 container form">
+            <div class="col-lg-5 container form">
 
-                <form class="my-5 mx-md-5 text-center z-depth-5" id="form-new" action="#!">
-                    <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-2 pb-1">REGISTER</h3>
+                <form class="my-5 mx-auto text-center z-depth-5" id="form-new" action="#!">
+                    <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-3 pb-1">REGISTER</h3>
 
-                    <div class="col-md-9 ml-5">
-                        <p>Name(required)</p>
+                    <div class="col-md-9 mx-auto">
+                        <p>Name*</p>
                         <input type="" class="form-control mb-4 new-input" placeholder="Enter your name" required>
                     </div>
 
-                    <div class="col-md-9 ml-5">
-                        <p>Email(required)</p>
+                    <div class="col-md-9 mx-auto">
+                        <p>Email*</p>
                         <input type="" class="form-control mb-4 new-input" placeholder="Enter you email" required>
                     </div>
 
 
-                    <div class="col-md-9 ml-5">
-                      <p>Phone number(required)</p>
+                    <div class="col-md-9 mx-auto">
+                      <p>Phone number*</p>
                         <input type="" class="form-control mb-4 new-input" placeholder="Enter phone number" required>
                     </div>
-                    <div class="col-md-9 ml-5">
-                      <p>Hackerrank ID(required)</p>
+                    <div class="col-md-9 mx-auto">
+                      <p>Hackerrank ID*</p>
                         <input type="" class="form-control mb-4 new-input" placeholder="Enter your Hackerrank ID">
                     </div>
-                    <div class="col-md-9 ml-5">
+                    <div class="col-md-9 mx-auto">
                       <p>Whatsapp number(If different)</p>
                         <input type="" class="form-control mb-4 new-input" placeholder="Enter phone number">
                     </div>
-                    <div class="col-md-9 ml-5">
-                      <p>Country(required)</p>
+                    <div class="col-md-9 mx-auto">
+                      <p>Country*</p>
                       <select id="country" name="country" class="browser-default custom-select new-input">
                                <option value="Afganistan">Afghanistan</option>
                                <option value="Albania">Albania</option>
@@ -329,7 +329,9 @@
                         <div class="form-check">
 
                             <label class="form-check-label" for="privpolicy">
-                                By using this service, you hereby consent to our<a href="https://thescriptgroup.in/privacypolicy" class="btn btn-link" role="button">
+                                
+                                By using this service, you hereby consent to our
+                                <a class="col" href="https://thescriptgroup.in/privacypolicy" class="btn btn-link" role="button">
                                     Privacy Policy
                                 </a>.
                             </label>
@@ -345,14 +347,14 @@
                                contenteditable="false">
 
 
+                        <div class="col-md-9 mx-auto">
+                            {% if extra_message %}
 
-                        {% if extra_message %}
+                            <input type="text" id="extra_message" name="extra_message" style="visibility: hidden"
+                                   value="{{ extra_message }}" contenteditable="false">
 
-                        <input type="text" id="extra_message" name="extra_message" style="visibility: hidden"
-                               value="{{ extra_message }}" contenteditable="false">
-
-                        {% endif %}
-
+                            {% endif %}
+                        </div>
 
 
                     <div class="text-center">
@@ -388,7 +390,7 @@
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
+    <!--<script>
         var isMobile = {
                 Android: function () {
                     return navigator.userAgent.match(/Android/i);
@@ -418,6 +420,6 @@
             $('.form').addClass('col-12');
             $('.form form').addClass('form-align');
         }
-    </script>
+    </script>-->
 </body>
 </html>
