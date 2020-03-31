@@ -1,6 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    
+    <style>
+        .logo-align {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -17,6 +25,7 @@
 
     <title></title>
 </head>
+
 <body>
 
     <section class="" style="margin-top: 10px; margin-right: 0px; background-image:url('images/background2.png'); width: 98%;">
@@ -27,10 +36,11 @@
                 <h2>19 DECEMBER 2019</h2>
             </div> -->
             <div class="row">
-            <div class="col-7 container">
+            <div class="col-7 container img">
                 <img src="images/battleofvarslogo.png" style="width: 480px;height: 270px;margin-top:100px;" alt="">
+                <h5 style="left: 7em; position: absolute;">My Name is Peter Parker and this is my<br>CatchPhrase</h5>
             </div>
-            <div class="col-5 container">
+            <div class="col-5 container form">
 
                 <form class="my-5 mx-md-5 text-center z-depth-5" id="form-new" action="#!">
                     <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-2 pb-1">REGISTER</h3>
@@ -373,5 +383,36 @@
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        var isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function () {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function () {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+
+        if( isMobile.any() ) {
+            $('.img').removeClass('col-5');
+            $('.img').addClass('col-12');
+            $('.img img').addClass('logo-align');
+            $('.form').removeClass('col-7');
+            $('.form').addClass('col-12');
+            $('.form form').addClass('logo-align');
+        }
+    </script>
 </body>
 </html>
