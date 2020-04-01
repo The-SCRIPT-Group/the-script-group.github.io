@@ -346,17 +346,6 @@
                     <input type="text" id="date" name="date" style="visibility: hidden" value="{{ date }}"
                            contenteditable="false">
 
-
-                    <div class="col-md-9 mx-auto">
-                        {% if extra_message %}
-
-                        <input type="text" id="extra_message" name="extra_message" style="visibility: hidden"
-                               value="{{ extra_message }}" contenteditable="false">
-
-                        {% endif %}
-                    </div>
-
-
                     <div class="text-center">
                         <button type="submit" style="margin:auto;display:block" class="btn btn-outline-black btn-rounded my-4 waves-effect"
                                 {% if extra_info %}onClick="document.getElementById('message-display').style.display = 'block';"
