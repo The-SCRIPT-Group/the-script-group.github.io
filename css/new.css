@@ -24,3 +24,19 @@
   }
 
   }
+.bold-text{
+font-weight: 700 !important;
+color: rgba(0, 0, 0);
+font-size: 5em;
+}
+
+.rules{
+  margin-top: 30px;
+  margin-left: 55%;
+}
+
+.script-logo{
+  margin-left:100px;
+  width:500px;
+  height:auto;
+}
