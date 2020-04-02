@@ -45,6 +45,7 @@ html {
     background-color: white;
     color: black;
     border: solid black 1px;
+    font-family: 'segoe typeface';
 }
 
 ::placeholder{
