@@ -9,9 +9,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.img {
-    margin-top:auto;
-    margin-bottom:auto;
+.padding {
+    min-height: 33vh;
 }
 
 .tagline {
