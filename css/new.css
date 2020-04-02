@@ -10,11 +10,10 @@ html {
 }
 
 .img {
-    margin-top:5em
+    margin-top:auto;
+    margin-bottom:auto;
 }
-.arrow-down {
-    visibility:hidden
-}
+
 .tagline {
     font-weight:600
 }
