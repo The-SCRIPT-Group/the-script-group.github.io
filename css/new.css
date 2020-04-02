@@ -10,9 +10,11 @@ html {
 }
 
 .img {
-    margin-top:8em
+    margin-top:5em
 }
-
+.arrow-down {
+    visibility:hidden
+}
 .tagline {
     font-weight:600
 }
@@ -21,6 +23,18 @@ html {
   .sticky-nav{
     visibility: hidden;
   }
+  .img {
+      vertical-align:bottom;
+      height: 100vh
+  }
+    .arrow-down {
+        visibility: visible;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #ffa500;
+    }
   }
 
 .new-input{
