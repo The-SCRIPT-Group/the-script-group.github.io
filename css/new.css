@@ -31,6 +31,11 @@ html {
         border-top: 20px solid #ffa500;
     }
 
+    .headers {
+        margin-left: auto;
+        margin-right:auto;
+    }
+
     .padding {
         min-height: 30vh;
     }
@@ -67,7 +72,7 @@ font-size: 3em;
   /*margin-left:100px;*/
   width:inherit;
   height:auto;
-  max-width: 550px
+  max-width: 350px
 }
 
 #rules,#about-us, input, p, h5, h3, h1 ,label, h4{
