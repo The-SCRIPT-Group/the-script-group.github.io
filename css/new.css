@@ -9,9 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.padding {
-    min-height: 33vh;
-}
 
 .tagline {
     font-weight:600
@@ -29,6 +26,10 @@ html {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 20px solid #ffa500;
+    }
+
+    .padding {
+        min-height: 33vh;
     }
   }
 
