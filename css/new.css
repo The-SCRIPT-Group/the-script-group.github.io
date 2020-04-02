@@ -62,7 +62,7 @@ font-size: 3em;
   height:auto;
 }
 
-#rules,#about-us, input, p, h5, h3, h1 ,label{
+#rules,#about-us, input, p, h5, h3, h1 ,label, h4{
   font-family: 'Cabin', sans-serif;
 }
 
