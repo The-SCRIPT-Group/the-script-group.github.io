@@ -20,9 +20,6 @@ html {
 }
 
 @media screen and (max-width: 776px) {
-  .sticky-nav{
-    visibility: hidden;
-  }
   .img {
       vertical-align:bottom;
       height: 100vh
@@ -64,11 +61,6 @@ font-size: 3em;
   /*margin-left:100px;*/
   width:inherit;
   height:auto;
-}
-
-.element{
-  width:160px;
-  background-color: #7ef9ff
 }
 
 #rules,#about-us, input, p, h5, h3, h1 ,label{
