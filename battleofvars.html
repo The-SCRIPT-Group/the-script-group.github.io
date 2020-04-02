@@ -6,8 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="height=device-height, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -33,7 +34,8 @@
             <div class="col-lg-7 img my-auto">
                 <!--<h5 class="text-center tagline"><b>Fight from 127.0.0.1</b></h5>-->
                 <div class="padding"></div>
-                <img class="mx-auto my-auto" src="images/battleofvarslogo.png" style="width: inherit;height: auto" alt="" />
+                <img class="mx-auto my-auto" src="images/battleofvarslogo.png"
+                    style="width: inherit;height: auto; max-width:660px" alt="" />
                 <a class="row arrow-down mx-auto" href="#form"></a>
                 <div class="padding"></div>
                 <!--<h1 class="text-center" style="font-weight:400"><b>April 12th</b></h1>
@@ -44,13 +46,14 @@
 
             <div class="col-lg-5 form" id="form">
 
-                <form class="my-5 mx-auto text-center z-depth-5" id="form-new" action="https://hades.thescriptgroup.in/submit" method="POST">
+                <form class="my-5 mx-auto text-center z-depth-5" id="form-new"
+                    action="https://hades.thescriptgroup.in/submit" method="POST">
                     <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-3 pb-1">REGISTER</h3>
 
                     <div class="col-md-9 mx-auto">
                         <p>Name*</p>
                         <input type="text" name="name" class="form-control mb-4 new-input" placeholder="Enter your name"
-                            maxlength="30" required>
+                            maxlength="30" id="name" onfocus=' $("#name").css("border", "1px solid black");' required>
                     </div>
 
                     <div class="col-md-9 mx-auto">
@@ -337,19 +340,17 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" style="margin:auto;display:block"
-                            class="btn btn-outline-black btn-rounded my-4 waves-effect"
-                            onClick="document.getElementById('message-display').style.display = 'block';">
+                        <button type="submit" style="margin:auto;display:block" id="submitButton"
+                            class="btn btn-outline-black btn-rounded my-4 waves-effect" onclick="validateInputs()">
 
                             Submit
 
                         </button><br>
                     </div>
 
-                    <input class="d-none" type="text" id="event" name="event"  value="Battle of Vars, 2020"
+                    <input class="d-none" type="text" id="event" name="event" value="Battle of Vars, 2020"
                         contenteditable="false">
-                    <input class="d-none" type="text" id="db" name="db" value="bov_2020"
-                        contenteditable="false">
+                    <input class="d-none" type="text" id="db" name="db" value="bov_2020" contenteditable="false">
                     <input class="d-none" type="text" id="date" name="date" value="12th April, 2020"
                         contenteditable="false">
                     <input class="d-none" type="text" id="date" name="no_qr" contenteditable="false">
@@ -385,37 +386,39 @@
                     <h5 class="px-1 bold-text">Rules</h5>
                     <div class="col-md-auto">
 
-                            <p>• Challenges are not necessarily straightforward. For eg: they might be stated as a story
-                                or a real-life situation.</p>
-                            <p>• Each challenge has a pre-determined score.</p>
-                            <p>• A participant’s score depends on the number of test cases a participant’s code
-                                submission successfully passes.</p>
-                            <p>• Each challenge will have some sample test cases that you can check your code for before
-                                you submit. HackerRank also has a system to test your program against custom inputs
-                                directly on their platform. You can test locally as well, but final code submission to
-                                be done on HackeRank</p>
-                            <p>• If a participant submits more than one solution per challenge, then the participant’s
-                                score will reflect the highest score achieved.</p>
-                            <p>• Participants are ranked by score. If two or more participants achieve the same score,
-                                then the tie is broken by the total time taken to submit the last solution resulting in
-                                a higher score</p>
-                            <p><b>• Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy
-                                code from sites, but you won't learn anything.</p>
-                            <p>• Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time
-                                will be declared winners (1st and 2nd).</p>
+                        <p>• Challenges are not necessarily straightforward. For eg: they might be stated as a story
+                            or a real-life situation.</p>
+                        <p>• Each challenge has a pre-determined score.</p>
+                        <p>• A participant’s score depends on the number of test cases a participant’s code
+                            submission successfully passes.</p>
+                        <p>• Each challenge will have some sample test cases that you can check your code for before
+                            you submit. HackerRank also has a system to test your program against custom inputs
+                            directly on their platform. You can test locally as well, but final code submission to
+                            be done on HackeRank</p>
+                        <p>• If a participant submits more than one solution per challenge, then the participant’s
+                            score will reflect the highest score achieved.</p>
+                        <p>• Participants are ranked by score. If two or more participants achieve the same score,
+                            then the tie is broken by the total time taken to submit the last solution resulting in
+                            a higher score</p>
+                        <p><b>• Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy
+                            code from sites, but you won't learn anything.</p>
+                        <p>• Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time
+                            will be declared winners (1st and 2nd).</p>
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-      <div class="container text-center">
-      <h4>Got any queries? Contact us at:</h4>
-        <div class="text-center"><p><a href="mailto:your-email@your-domain.com" style="color: black;">
-          <i class="fa fa-envelope fa-4x" aria-hidden="true"></i><br>
-          battleofvars@thescriptgroup.in</a></p>
+    <script type="text/javascript" src="js/battleofvars.js"></script>
+    <div class="container text-center">
+        <h4>Got any queries? Contact us at:</h4>
+        <div class="text-center">
+            <p><a href="mailto:your-email@your-domain.com" style="color: black;">
+                    <i class="fa fa-envelope fa-4x" aria-hidden="true"></i><br>
+                    battleofvars@thescriptgroup.in</a></p>
         </div>
-      </div>
+    </div>
 
 
     <!-- jQuery -->
