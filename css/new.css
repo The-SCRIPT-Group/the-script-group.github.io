@@ -40,3 +40,18 @@ font-size: 5em;
   width:500px;
   height:auto;
 }
+
+.element{
+  width:140px;
+  background-color: #7ef9ff
+}
+
+#rules,#about-us{
+  margin-left:200px;
+}
+
+.sticky-nav{
+  position: fixed;
+  width:200px;
+  top:50%;
+}
