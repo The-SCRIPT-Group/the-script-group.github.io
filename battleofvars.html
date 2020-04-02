@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -22,7 +23,9 @@
     <title></title>
 </head>
 <!--background-image:url('images/bov-bg.png');-->
-<body style="background-image: linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1)); background-repeat:no-repeat; overflow-x: hidden;">
+
+<body
+    style="background-image: linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1)); background-repeat:no-repeat; overflow-x: hidden;">
     <!-- sticky bar -->
     <div class="sticky-nav">
         <div class="row">
@@ -39,12 +42,12 @@
     <section class="container">
 
         <div class="row">
-            <div class="col-lg-7 img" >
+            <div class="col-lg-7 img">
                 <h5 class="text-center tagline"><b>Fight from 127.0.0.1</b></h5>
                 <img class="mx-auto" src="images/battleofvarslogo.png" style="width: inherit;height: auto" alt="" />
                 <h1 class="text-center" style="font-weight:400"><b>April 12th</b></h1>
                 <h5 class="text-center">My Name is Peter Parker and this is my<br>CatchPhrase</h5>
-                
+
             </div>
 
 
@@ -55,22 +58,26 @@
 
                     <div class="col-md-9 mx-auto">
                         <p>Name*</p>
-                        <input type="text" class="form-control mb-4 new-input" placeholder="Enter your name" required>
+                        <input type="text" name="name" class="form-control mb-4 new-input" placeholder="Enter your name"
+                            maxlength="30" required>
                     </div>
 
                     <div class="col-md-9 mx-auto">
                         <p>Email*</p>
-                        <input type="email" class="form-control mb-4 new-input" placeholder="Enter you email" required>
+                        <input type="email" name="email" class="form-control mb-4 new-input"
+                            placeholder="Enter your email address" maxlength="50" required>
                     </div>
 
 
                     <div class="col-md-9 mx-auto">
                         <p>Phone number*</p>
-                        <input type="text" class="form-control mb-4 new-input" placeholder="Enter phone number" required>
+                        <input type="text" name="phone" class="form-control mb-4 new-input"
+                            placeholder="Enter phone number" maxlength="10" required>
                     </div>
                     <div class="col-md-9 mx-auto">
                         <p>Hackerrank ID*</p>
-                        <input type="text" class="form-control mb-4 new-input" placeholder="Enter your Hackerrank ID">
+                        <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
+                            placeholder="Enter your Hackerrank ID" maxlength="50" required pattern="^\w*$" />
                     </div>
                     <div class="col-md-9 mx-auto">
                         <p>Country*</p>
@@ -330,7 +337,8 @@
                         <label class="form-check-label" for="privpolicy">
 
                             By using this service, you hereby consent to our
-                            <a href="https://thescriptgroup.in/privacypolicy" class="col btn btn-link" role="button" style="margin-left: -0.75em;">
+                            <a href="https://thescriptgroup.in/privacypolicy" class="col btn btn-link" role="button"
+                                style="margin-left: -0.75em;">
                                 privacy policy.
                             </a>
                         </label>
@@ -338,13 +346,21 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" style="margin:auto;display:block" class="btn btn-outline-black btn-rounded my-4 waves-effect"
-                                onClick="document.getElementById('message-display').style.display = 'block';">
+                        <button type="submit" style="margin:auto;display:block"
+                            class="btn btn-outline-black btn-rounded my-4 waves-effect"
+                            onClick="document.getElementById('message-display').style.display = 'block';">
 
                             Submit
 
                         </button><br>
                     </div>
+
+                    <input type="text" id="event" name="event" style="visibility: hidden" value="Battle of Vars, 2020"
+                        contenteditable="false">
+                    <input type="text" id="db" name="db" style="visibility: hidden" value="bov_2020"
+                        contenteditable="false">
+                    <input type="text" id="date" name="date" style="visibility: hidden" value="12th April, 2020"
+                        contenteditable="false">
 
                 </form>
 
@@ -356,8 +372,12 @@
                 <div class="col-lg-6">
                     <h5 class="px-1 bold-text">About Us</h5>
                     <p class="px-3">
-                        Battle of vars is an online competitive coding challenge hosted by The S.C.R.I.P.T Group. As most of us are at home, unable to be productive, this competition was created to excite and challenge the coders among us. It is a non-profit competition organized only for the purpose of
-                        providing a platform for coders around the world. Competitions like this will help you to stay calm and concentrated in such time , while helping us break boundaries at a global level. So, what are you waiting for? Come, Join us!
+                        Battle of vars is an online competitive coding challenge hosted by The S.C.R.I.P.T Group. As
+                        most of us are at home, unable to be productive, this competition was created to excite and
+                        challenge the coders among us. It is a non-profit competition organized only for the purpose of
+                        providing a platform for coders around the world. Competitions like this will help you to stay
+                        calm and concentrated in such time , while helping us break boundaries at a global level. So,
+                        what are you waiting for? Come, Join us!
                     </p>
                 </div>
 
@@ -373,14 +393,24 @@
                     <h5 class="px-1 bold-text">Rules</h5>
                     <div class="col-md-auto">
                         <ul>
-                            <li>Challenges are not necessarily straightforward. For eg: they might be stated as a story or a real-life situation.</li>
+                            <li>Challenges are not necessarily straightforward. For eg: they might be stated as a story
+                                or a real-life situation.</li>
                             <li>Each challenge has a pre-determined score.</li>
-                            <li>A participant’s score depends on the number of test cases a participant’s code submission successfully passes.</li>
-                            <li>Each challenge will have some sample test cases that you can check your code for before you submit. HackerRank also has a system to test your program against custom inputs directly on their platform. You can test locally as well, but final code submission to be done on HackeRank</li>
-                            <li>If a participant submits more than one solution per challenge, then the participant’s score will reflect the highest score achieved.</li>
-                            <li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last solution resulting in a higher score</li>
-                            <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.</li>
-                            <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
+                            <li>A participant’s score depends on the number of test cases a participant’s code
+                                submission successfully passes.</li>
+                            <li>Each challenge will have some sample test cases that you can check your code for before
+                                you submit. HackerRank also has a system to test your program against custom inputs
+                                directly on their platform. You can test locally as well, but final code submission to
+                                be done on HackeRank</li>
+                            <li>If a participant submits more than one solution per challenge, then the participant’s
+                                score will reflect the highest score achieved.</li>
+                            <li>Participants are ranked by score. If two or more participants achieve the same score,
+                                then the tie is broken by the total time taken to submit the last solution resulting in
+                                a higher score</li>
+                            <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy
+                                code from sites, but you won't learn anything.</li>
+                            <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time
+                                will be declared winners (1st and 2nd).</li>
                         </ul>
                     </div>
                 </div>
@@ -402,11 +432,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/-Fixed-Navbar-start-with-transparency-background-BS4-.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
