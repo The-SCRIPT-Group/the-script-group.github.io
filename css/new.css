@@ -5,9 +5,15 @@
     width: 80%;
 }
 
+.img {
+    margin-top:10em
+}
 
+.tagline {
+    font-weight:600
+}
 
-@media screen and (max-width: 776px) {/*Probably Doesnt work */
+@media screen and (max-width: 776px) {
   .sticky-nav{
     visibility: hidden;
   }
