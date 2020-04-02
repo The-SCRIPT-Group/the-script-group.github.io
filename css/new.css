@@ -47,9 +47,9 @@ font-size: 3em;
   background-color: #7ef9ff
 }
 
-/*#rules,#about-us{
-  margin-left:200px;
-}*/
+#rules,#about-us, input, p, h5, h3, h1 ,label{
+  font-family: 'Cabin', sans-serif;
+}
 
 .sticky-nav{
   position: fixed;
