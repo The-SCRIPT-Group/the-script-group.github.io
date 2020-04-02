@@ -9,17 +9,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.img {
-    margin-top:5em
-}
-.arrow-down {
-    visibility:hidden
-}
+
 .tagline {
     font-weight:600
 }
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 768px) {
   .img {
       vertical-align:bottom;
       height: 100vh
@@ -31,6 +26,10 @@ html {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 20px solid #ffa500;
+    }
+
+    .padding {
+        min-height: 30vh;
     }
   }
 
@@ -63,7 +62,7 @@ font-size: 3em;
   height:auto;
 }
 
-#rules,#about-us, input, p, h5, h3, h1 ,label{
+#rules,#about-us, input, p, h5, h3, h1 ,label, h4{
   font-family: 'Cabin', sans-serif;
 }
 
