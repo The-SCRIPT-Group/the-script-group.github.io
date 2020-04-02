@@ -63,6 +63,7 @@ font-size: 3em;
   /*margin-left:100px;*/
   width:inherit;
   height:auto;
+  max-width: 550px
 }
 
 #rules,#about-us, input, p, h5, h3, h1 ,label, h4{
