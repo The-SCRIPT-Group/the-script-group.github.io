@@ -54,6 +54,10 @@ color: #000000;
 font-size: 3em;
 }
 
+.text-content {
+    font-size:18px
+}
+
 .rules {
     margin-top: 30px;
     /*margin-left: 55%;*/
