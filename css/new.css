@@ -5,6 +5,10 @@
     width: 80%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .img {
     margin-top:10em
 }
