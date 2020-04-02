@@ -54,6 +54,10 @@ color: #000000;
 font-size: 3em;
 }
 
+.text-content {
+    font-size:18px
+}
+
 .rules {
     margin-top: 30px;
     /*margin-left: 55%;*/
@@ -63,6 +67,7 @@ font-size: 3em;
   /*margin-left:100px;*/
   width:inherit;
   height:auto;
+  max-width: 550px
 }
 
 #rules,#about-us, input, p, h5, h3, h1 ,label, h4{
