@@ -14,7 +14,7 @@ function validatePhone() {
     let country = $("#country").val()
     let phoneNum = phone.replace('+' + country, '');
     console.log(phoneNum);
-    if (phoneNum.length == 10) { return true; }
+    if (phoneNum.length == 10 || phoneNum.length == 0) { return true; }
     $("#phoneNum").css("border", "4px solid red");
     return false;
 }
@@ -34,7 +34,7 @@ $("#form-new").submit(function (e) {
     if (!validateName()) { flg = 0; }
     if (!validatePhone()) { flg = 0; }
     if (!validateEmail()) { flg = 0; }
-    val email_content = `Dear {name},
+    let email_content = `Dear {name},
     <br>Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.
     <br>The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.
     <br>Be sure to prepare for the competition and review the event information <a href=https://thescriptgroup.in/battleofvars>here</a>.
@@ -50,7 +50,7 @@ $("#form-new").submit(function (e) {
         <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.</li>
         <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
     </ul> 
-    <img src="images/LogoB-Trans.png" class="script-logo  mx-auto"`
+    <img src="images/LogoB-Trans.png" class="script-logo  mx-auto">`
     if (flg) {
         data = {
             'name': $("#name").val(),
