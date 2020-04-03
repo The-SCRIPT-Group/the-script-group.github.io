@@ -30,7 +30,6 @@ function validateEmail() {
 $("#form-new").submit(function (e) {
     e.preventDefault();
     let flg = 1;
-    alert('9isaudhfisauhd')
     if (!validateName()) { flg = 0; }
     if (!validatePhone()) { flg = 0; }
     if (!validateEmail()) { flg = 0; }
@@ -48,6 +47,14 @@ $("#form-new").submit(function (e) {
             'no_qr': $("#no_qr").val(),
         }
         console.log(data)
+
+        $.post(
+            "https://hades.thescriptgroup.in/submit",
+            data,
+            function(data, status){
+                alert(data);
+            }
+        );
     } else {
         alert("Please check the highlighted inputs")
         return false;
