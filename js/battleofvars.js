@@ -10,7 +10,9 @@ function validateName() {
 
 function validatePhone() {
     let phone = $("#phoneNum").val();
-    let phoneNum = phone.replace(/[^\d]/g, '');
+    let country = $("#country").val()
+    let phoneNum = phone.replace('+' + country, '');
+    console.log(phoneNum);
     if (phoneNum.length == 10) { return true; }
     $("#phoneNum").css("border", "4px solid red");
     return false;
