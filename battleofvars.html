@@ -68,11 +68,6 @@
 
 
                         <div class="col-md-9 mx-auto">
-                            <p>Phone number</p>
-                            <input type="number" name="phone" id="phoneNum" onfocusout="validatePhone()" class="form-control mb-4 new-input"
-                                placeholder="Enter phone number" maxlength="10" onfocus=' $("#phoneNum").css("border", "1px solid black");'>
-                        </div>
-                        <div class="col-md-9 mx-auto">
                             <p>Hackerrank ID*</p>
                             <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
                                 placeholder="Enter your Hackerrank ID" id="hacker_id" maxlength="50" required pattern="^\w*$" />
@@ -301,7 +296,8 @@
                         <div class="col-md-9 mx-auto">
                             <p>Phone number</p>
                             <input id="insert-here" type="text" name="phone" class="form-control mb-4 new-input"
-                                  placeholder="Enter phone number" maxlength="10" value="+91">
+                                  placeholder="Enter phone number" maxlength="10" value="+91" onfocusout="validatePhone()"
+                                   onfocus=' $("#phoneNum").css("border", "1px solid black");'>
                         </div>
                         <br>
                         <div class="form-check">
