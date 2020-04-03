@@ -54,7 +54,7 @@
                         <div class="col-md-9 mx-auto">
                             <p>Name*</p>
                             <input type="text" name="name" class="form-control mb-4 new-input" placeholder="Enter your name"
-                                   maxlength="30" id="name" onfocus=' $("#name").css("border", "1px solid black");' required>
+                                   maxlength="30" id="name" onfocus=' $("#name").css("border", "1px solid black");' onfocusout="validateInput()" required>
                         </div>
 
                         <div class="col-md-9 mx-auto">
@@ -341,8 +341,8 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" style="display:block;background-color:#000000;border-radius:30px " id="submitButton"
-                                    class="mx-auto btn btn-dark text-light btn-rounded my-4" onclick="validateInputs()">
+                            <input type="submit" style="display:block;background-color:#000000;border-radius:30px " id="submitButton"
+                                    class="mx-auto btn btn-dark text-light btn-rounded my-4">
 
                                 Submit
 
@@ -439,7 +439,6 @@
 
             <img src="images/LogoB-Trans.png" class="script-logo  mx-auto" alt="">
         </div>
-        <script  type="text/javascript" src="js/battleofvars.js"></script>
         <div class="container text-center">
             <br>
             <br>
@@ -462,7 +461,8 @@
             </div>
         </div>
     </section>
-
+    
+    <script  type="text/javascript" src="js/battleofvars.js"></script>
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
