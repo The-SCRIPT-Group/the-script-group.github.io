@@ -8,7 +8,7 @@
     <meta name="viewport" content="height=device-height, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
@@ -26,17 +26,19 @@
 </head>
 <!--background-image:url('images/bov-bg.png');linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));-->
 <!--rgba(126,249,255,1)-->
-<body style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
+
+<body
+    style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
 
     <!--style="background-image: linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));-->
-    <section >
-        <div class="container" >
+    <section>
+        <div class="container">
             <div class="row">
                 <div class="col-lg-7 img my-auto" style="height: 100vh;">
                     <!--<h5 class="text-center tagline"><b>Fight from 127.0.0.1</b></h5>-->
                     <div class="padding"></div>
                     <img class="mx-auto my-auto" src="images/battleofvarslogo.png"
-                         style="width: inherit;height: auto; max-width:660px" alt="" />
+                        style="width: inherit;height: auto; max-width:660px" alt="" />
                     <a class="row arrow-down mx-auto" href="#form"></a>
                     <div class="padding"></div>
                     <!--<h1 class="text-center" style="font-weight:400"><b>April 12th</b></h1>
@@ -48,31 +50,33 @@
                 <div class="col-lg-5 form" id="form">
 
                     <form class="my-5 mx-auto text-center z-depth-5" id="form-new"
-                          action="https://hades.thescriptgroup.in/submit" method="POST">
+                        action="https://hades.thescriptgroup.in/submit" method="POST">
                         <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-3 pb-1">REGISTER</h3>
 
                         <div class="col-md-9 mx-auto">
                             <p>Name*</p>
-                            <input type="text" name="name" class="form-control mb-4 new-input" placeholder="Enter your name"
-                                   maxlength="30" id="name" onfocus=' $("#name").css("border", "1px solid black");' onfocusout="validateInput()" required>
+                            <input type="text" name="name" class="form-control mb-4 new-input"
+                                placeholder="Enter your name" maxlength="30" id="name"
+                                onfocus=' $("#name").css("border", "1px solid black");' onfocusout="validateInput()"
+                                required>
                         </div>
 
                         <div class="col-md-9 mx-auto">
                             <p>Email*</p>
                             <input type="email" name="email" class="form-control mb-4 new-input"
-                                   placeholder="Enter your email address" maxlength="50" required>
+                                placeholder="Enter your email address" maxlength="50" required>
                         </div>
 
 
                         <div class="col-md-9 mx-auto">
-                            <p>Phone number*</p>
+                            <p>Phone number</p>
                             <input type="text" name="phone" class="form-control mb-4 new-input"
-                                   placeholder="Enter phone number" maxlength="10">
+                                placeholder="Enter phone number" maxlength="10">
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p>Hackerrank ID*</p>
                             <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
-                                   placeholder="Enter your Hackerrank ID" maxlength="50" required pattern="^\w*$" />
+                                placeholder="Enter your Hackerrank ID" maxlength="50" required pattern="^\w*$" />
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p>Country*</p>
@@ -333,7 +337,7 @@
 
                                 By using this service, you hereby consent to our
                                 <a href="https://thescriptgroup.in/privacypolicy" class="col btn btn-link" role="button"
-                                   style="margin-left: -0.75em;">
+                                    style="margin-left: -0.75em;">
                                     privacy policy.
                                 </a>
                             </label>
@@ -341,22 +345,24 @@
                         </div>
 
                         <div class="text-center">
-                            <input type="submit" style="display:block;background-color:#000000;border-radius:30px " id="submitButton"
-                                    class="mx-auto btn btn-dark text-light btn-rounded my-4"/>
+                            <input type="submit" style="display:block;background-color:#000000;border-radius:30px "
+                                id="submitButton" class="mx-auto btn btn-dark text-light btn-rounded my-4" />
 
                             <br>
                         </div>
 
                         <input class="d-none" type="text" id="event" name="event" value="Battle of Vars, 2020"
-                               contenteditable="false">
+                            contenteditable="false">
                         <input class="d-none" type="text" id="db" name="db" value="bov_2020" contenteditable="false">
                         <input class="d-none" type="text" id="date" name="date" value="12th April, 2020"
-                               contenteditable="false">
+                            contenteditable="false">
                         <input class="d-none" type="text" id="no_qr" name="no_qr" contenteditable="false">
-                        <input class="d-none" type="text" id="email_content" name="no_qr" contenteditable="false"
-                               value="Dear {name},Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.Be sure to prepare for the competition and review the event information &lt;a href=https://thescriptgroup.in/battleofvars>here&lt;/a>.">
+                        <input class="d-none" type="text" id="email_content" name="email_content" contenteditable="false"
+                            value="Dear {name},Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.
+The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.
+Be sure to prepare for the competition and review the event information &lt;a href=https://thescriptgroup.in/battleofvars>here&lt;/a>.">
                         <input class="d-none" type="text" id="email_content_fields" name="email_content_fields"
-                               contenteditable="false" value="name">
+                            contenteditable="false" value="name">
                     </form>
 
                 </div>
@@ -364,7 +370,7 @@
         </div>
     </section>
     <section style="">
-        
+
 
         <div class="container py-2" id="about-us">
             <div class="row align-items-center" style="margin:0.5em">
@@ -376,14 +382,15 @@
                         challenge the coders among us. It is a non-profit competition organized only for the purpose of
                         providing a platform for coders around the world. Competitions like this will help you to stay
                         calm and concentrated in such time , while helping us break boundaries at a global level.
-                        Participants and winners will be sent verifiable e-certificates on their respective e-mail addresses.
+                        Participants and winners will be sent verifiable e-certificates on their respective e-mail
+                        addresses.
                         So, what are you waiting for? Come, Join us!
                     </div>
                 </div>
                 <div class="col-lg-5 my-auto mx-auto ">
                     <a href="https://thescriptgroup.in">
-                    <img src="images/LogoB-Trans.png" class="script-logo  mx-auto" alt="">
-                    </a>        
+                        <img src="images/LogoB-Trans.png" class="script-logo  mx-auto" alt="">
+                    </a>
                 </div>
 
             </div>
@@ -391,7 +398,7 @@
     </section>
     <section>
         <!--style="background-color:#ff9100"-->
-        
+
         <div class="container text-center my-auto pb-3">
             <br>
             <h4>Got any queries? Contact us at:</h4>
@@ -414,8 +421,8 @@
             <br>
         </div>
     </section>
-    
-    <script  type="text/javascript" src="js/battleofvars.js"></script>
+
+    <script type="text/javascript" src="js/battleofvars.js"></script>
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -427,14 +434,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/-Fixed-Navbar-start-with-transparency-background-BS4-.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 </body>
 
