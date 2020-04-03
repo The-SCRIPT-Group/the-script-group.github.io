@@ -5,6 +5,11 @@
     width: 80%;
 }
 
+.padding {
+    min-height: 30vh;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -36,9 +41,7 @@ html {
         margin-right:auto;
     }
 
-    .padding {
-        min-height: 30vh;
-    }
+
   }
 
 .new-input{
