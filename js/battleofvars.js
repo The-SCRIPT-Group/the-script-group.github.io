@@ -53,6 +53,10 @@ $("#form-new").submit(function (e) {
             data,
             function(data, status){
                 alert(data);
+                $("#name").val("");
+                $("#email").val("");
+                $("#hacker_id").val("");
+                $("#phoneNum").val("+" + $("#country").val());
             }
         );
     } else {
