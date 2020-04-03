@@ -6,7 +6,7 @@
 }
 
 .padding {
-    min-height: 30vh;
+    height:auto;
 }
 
 
@@ -41,6 +41,9 @@ html {
         margin-right:auto;
     }
 
+    .padding {
+        height: 30%;
+    }
 
   }
 
