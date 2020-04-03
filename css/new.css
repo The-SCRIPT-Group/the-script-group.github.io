@@ -7,6 +7,7 @@
 
 .padding {
     height:auto;
+
 }
 
 
@@ -16,6 +17,9 @@ html {
 @media screen and (min-width: 1600px) {
     .container {
         max-width: 1600px
+    }
+    .padding {
+        min-height: 20%;
     }
 }
 .tagline {
