@@ -10,6 +10,7 @@ function validateName() {
 
 function validatePhone() {
     let phone = $("#phoneNum").val();
+    if (phone.length == 0) { return true; }
     let country = $("#country").val()
     let phoneNum = phone.replace('+' + country, '');
     console.log(phoneNum);
@@ -33,6 +34,23 @@ $("#form-new").submit(function (e) {
     if (!validateName()) { flg = 0; }
     if (!validatePhone()) { flg = 0; }
     if (!validateEmail()) { flg = 0; }
+    val email_content = `Dear {name},
+    <br>Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.
+    <br>The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.
+    <br>Be sure to prepare for the competition and review the event information <a href=https://thescriptgroup.in/battleofvars>here</a>.
+    <br>Rules of the competition are as follows:
+    <br>
+    <ul>
+        <li>Challenges are not necessarily straightforward. For eg: they might be stated as a story or a real-life situation.</li>
+        <li>Each challenge has a pre-determined score.</li>
+        <li>A participant’s score depends on the number of test cases a participant’s code submission successfully passes.</li>
+        <li>Each challenge will have some sample test cases that you can check your code for before you submit. HackerRank also has a system to test your program against custom inputs directly on their platform. You can test locally as well, but final code submission to be done on HackeRank</li>
+        <li>If a participant submits more than one solution per challenge, then the participant’s score will reflect the highest score achieved.</li>
+        <li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last solution resulting in a higher score</li>
+        <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.</li>
+        <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
+    </ul> 
+    <img src="images/LogoB-Trans.png" class="script-logo  mx-auto"`
     if (flg) {
         data = {
             'name': $("#name").val(),
@@ -40,18 +58,18 @@ $("#form-new").submit(function (e) {
             'phone': $("#phoneNum").val(),
             'hackerrank_username': $("#hacker_id").val(),
             'country': $("#country").val(),
-            'email_content': $("#email_content").val(),
-            'event': $("#event").val(),
-            'db': $("#db").val(),
-            'date': $("#date").val(),
-            'no_qr': $("#no_qr").val(),
+            'email_content': email_content,
+            'email_content_fields': 'name',
+            'event': 'Battle of Vars, 2020',
+            'db': 'bov_2020',
+            'date': '12th April, 2020',
+            'no_qr': '',
         }
-        console.log(data)
-
+   
         $.post(
             "https://hades.thescriptgroup.in/submit",
             data,
-            function(data, status){
+            function (data, status) {
                 alert(data);
             }
         );
@@ -59,6 +77,4 @@ $("#form-new").submit(function (e) {
         alert("Please check the highlighted inputs")
         return false;
     }
- }); 
-
-
+});

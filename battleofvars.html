@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="height=device-height, initial-scale=1">
 
-
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
@@ -35,28 +34,19 @@
 <body
     style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
 
-    <!--style="background-image: linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));-->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 img my-auto" style="height: 100vh;">
-                    <!--<h5 class="text-center tagline"><b>Fight from 127.0.0.1</b></h5>-->
                     <div class="padding"></div>
                     <img class="mx-auto my-auto" src="images/battleofvarslogo.png"
                         style="width: inherit;height: auto; max-width:660px" alt="" />
                     <a class="row arrow-down mx-auto" href="#form"></a>
                     <div class="padding"></div>
-                    <!--<h1 class="text-center" style="font-weight:400"><b>April 12th</b></h1>
-                    <h5 class="text-center">My Name is Peter Parker and this is my<br>CatchPhrase</h5>-->
-
                 </div>
-
-
                 <div class="col-lg-5 form" id="form">
-
                     <form class="my-5 mx-auto text-center z-depth-5" method="post" id="form-new">
                         <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-3 pb-1">REGISTER</h3>
-
                         <div class="col-md-9 mx-auto">
                             <p>Name*</p>
                             <input type="text" name="name" class="form-control mb-4 new-input"
@@ -64,14 +54,11 @@
                                 onfocus=' $("#name").css("border", "1px solid black");' onfocusout="validateName()"
                                 required>
                         </div>
-
                         <div class="col-md-9 mx-auto">
                             <p>Email*</p>
                             <input type="email" name="email" class="form-control mb-4 new-input"
                                 placeholder="Enter your email address" maxlength="50" id="email" required onfocus=' $("#email").css("border", "1px solid black");' onfocusout="validateEmail()">
                         </div>
-
-
                         <div class="col-md-9 mx-auto">
                             <p>Hackerrank ID*</p>
                             <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
@@ -294,7 +281,6 @@
                                <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
                                <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                                <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-
                             </select>
                         </div>
                         <br>
@@ -306,59 +292,25 @@
                         </div>
                         <br>
                         <div class="form-check">
-
                             <label class="form-check-label" for="privpolicy">
-
                                 By using this service, you hereby consent to our
                                 <a href="https://thescriptgroup.in/privacypolicy" class="col btn btn-link" role="button"
                                     style="margin-left: -0.75em;">
                                     privacy policy.
                                 </a>
                             </label>
-
                         </div>
-
                         <div class="text-center">
                             <button type="submit" style="display:block;background-color:#000000;border-radius:30px "
                                 id="submitButton" class="mx-auto btn btn-dark text-light btn-rounded my-4">Submit</button>
                             <br>
                         </div>
-
-                        <input class="d-none" type="text" id="event" name="event" value="Battle of Vars, 2020"
-                            contenteditable="false">
-                        <input class="d-none" type="text" id="db" name="db" value="bov_2020" contenteditable="false">
-                        <input class="d-none" type="text" id="date" name="date" value="12th April, 2020"
-                            contenteditable="false">
-                        <input class="d-none" type="text" id="no_qr" name="no_qr" contenteditable="false">
-                        <input class="d-none" type="text" id="email_content" name="email_content" contenteditable="false"
-                            value="Dear {name},
-                            &lt;br>Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.
-                            &lt;br>The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.
-                            &lt;br>Be sure to prepare for the competition and review the event information &lt;a href=https://thescriptgroup.in/battleofvars>here&lt;/a>.
-                            &lt;br>Rules of the competition are as follows:
-                            &lt;br>
-                            &lt;ul>
-                                &lt;li>Challenges are not necessarily straightforward. For eg: they might be stated as a story or a real-life situation.&lt;/li>
-                                &lt;li>Each challenge has a pre-determined score.&lt;/li>
-                                &lt;li>A participant’s score depends on the number of test cases a participant’s code submission successfully passes.&lt;/li>
-                                &lt;li>Each challenge will have some sample test cases that you can check your code for before you submit. HackerRank also has a system to test your program against custom inputs directly on their platform. You can test locally as well, but final code submission to be done on HackeRank&lt;/li>
-                                &lt;li>If a participant submits more than one solution per challenge, then the participant’s score will reflect the highest score achieved.&lt;/li>
-                                &lt;li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last solution resulting in a higher score&lt;/li>
-                                &lt;li>&lt;b>Unrestricted Internet access allowed&lt;/b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.&lt;/li>
-                                &lt;li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).&lt;/li>
-                            &lt;/ul> 
-                            &lt;img src='images/LogoB-Trans.png' class='script-logo  mx-auto'">
-                        <input class="d-none" type="text" id="email_content_fields" name="email_content_fields"
-                            contenteditable="false" value="name">
                     </form>
-
                 </div>
             </div>
         </div>
     </section>
     <section>
-
-
         <div class="container py-2" id="about-us">
             <div class="row align-items-center" style="margin:0.5em">
                 <div class="col-lg-7 my-auto col-md-auto text-content">
@@ -384,8 +336,6 @@
         </div>
     </section>
     <section>
-        <!--style="background-color:#ff9100"-->
-
         <div class="container text-center my-auto pb-3">
             <br>
             <h4>Got any queries? Contact us at:</h4>
@@ -427,5 +377,4 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/countrycode.js"></script>
 </body>
-
 </html>
