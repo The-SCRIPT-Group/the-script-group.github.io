@@ -50,7 +50,7 @@ $("#form-new").submit(function (e) {
         <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.</li>
         <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
     </ul> 
-    <img src="images/LogoB-Trans.png" class="script-logo  mx-auto">`
+    <img src="https://thescriptgroup.in/images/LogoB-Trans.png" class="script-logo  mx-auto">`
     if (flg) {
         data = {
             'name': $("#name").val(),
