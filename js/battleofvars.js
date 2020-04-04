@@ -74,6 +74,7 @@ $("#form-new").submit(function (e) {
             'date': '12th April, 2020',
             'no_qr': '',
         }
+        $('#phoneCode').val($("#country").val())
         
         $.post(
             "https://hades.thescriptgroup.in/submit",
