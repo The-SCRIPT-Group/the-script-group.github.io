@@ -15,7 +15,6 @@ function validateName() {
 }
 
 function validatePhone() {
-    debugger
     let phone = $("#phoneNum").val();
     if (phone.length == 0) {
         $("#phoneCode").val("")
