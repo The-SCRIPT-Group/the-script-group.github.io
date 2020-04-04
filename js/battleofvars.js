@@ -1,6 +1,8 @@
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
+$('#phoneCode').inputAutogrow()
+$('#phoneCode').trigger('change');
 
 function validateName() {
     let name = $("#name").val();
