@@ -35,6 +35,11 @@ function validateEmail() {
   return false;
 }
 
+function alertModal(message) {  
+  $("#alert-display").style.display = 'block';
+  $("#alert-content").text(message);
+}
+
 $("#form-new").submit(function (e) {
   e.preventDefault();
   let flg = 1;
@@ -244,13 +249,13 @@ $("#form-new").submit(function (e) {
       'date': '12th April, 2020',
       'no_qr': '',
     }
-    $('#phoneCode').val($("#country").val())
+    $('#phoneCode').val('+' + $("#country").val())
 
     $.post(
       "https://hades.thescriptgroup.in/submit",
       data,
       function (data, status) {
-        alert(data);
+        alertModal(data);
         $("#name").val("");
         $("#email").val("");
         $("#hacker_id").val("");
@@ -258,7 +263,7 @@ $("#form-new").submit(function (e) {
       }
     );
   } else {
-    alert("Please check the highlighted inputs")
+    alertModal("Please check the highlighted inputs")
     return false;
   }
 });
