@@ -52,11 +52,7 @@ $("#form-new").submit(function (e) {
     <img src="https://thescriptgroup.in/images/LogoB-Trans.png" class="script-logo  mx-auto">`
 
     let phone = $("#phoneNum").val()
-    if (flg) {
-        $('#country option').val(function(){
-           return $(this).text();
-        });
-        
+    if (flg) {       
         data = {
             'name': $("#name").val(),
             'email': $("#email").val(),
