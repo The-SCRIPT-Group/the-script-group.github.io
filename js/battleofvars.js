@@ -60,11 +60,11 @@ $("#form-new").submit(function (e) {
     <img src="https://thescriptgroup.in/images/LogoB-trans.png" class="script-logo  mx-auto">`
     let phoneCode = $("#phoneCode").val()
     let phone = $("#phoneNum").val()
-    if (flg) {       
+    if (flg) {
         data = {
             'name': $("#name").val(),
             'email': $("#email").val(),
-            'phone': phoneCode+phone,
+            'phone': phoneCode + phone,
             'hackerrank_username': $("#hacker_id").val(),
             'country': $("#country option:selected").html().replace(/ \(\+?\d+\)/, ''),
             'email_content': email_content,
@@ -75,7 +75,7 @@ $("#form-new").submit(function (e) {
             'no_qr': '',
         }
         $('#phoneCode').val($("#country").val())
-        
+
         $.post(
             "https://hades.thescriptgroup.in/submit",
             data,
