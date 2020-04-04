@@ -293,9 +293,9 @@
                         <div class="col-md-9 mx-auto">
                             <p class="field">Phone number</p>
                             <div class="input-group">
-                                <input type="text" id="phoneCode" class="form-control mb-4 new-input d-inline" style="width:25%" value="+91"
-                                       onfocus=' $(this).css("border", "1px solid black")' />
-                                <input type="text" id="phoneNum" class="form-control mb-4 new-input d-inline" style="width:75%"
+                                <input type="text" id="phoneCode" class="form-control mb-4 new-input d-inline" maxlength="6" style="max-width:35%" value="+91"
+                                       onfocus=' $(this).css("border", "1px solid black")' disabled />
+                                <input type="text" id="phoneNum" class="form-control mb-4 new-input d-inline" 
                                        onfocus=' $(this).css("border", "1px solid black")' />
                             </div>
                             <!--<input id="phoneNum" type="text" name="phone" class="form-control mb-4 new-input"
