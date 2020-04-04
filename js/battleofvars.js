@@ -1,47 +1,47 @@
 $(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
 });
 $('#phoneCode').inputAutogrow()
 $('#phoneCode').trigger('change');
 
 function validateName() {
-    let name = $("#name").val();
-    let letters = /^[A-Za-z ]+$/;
-    if (!(name.match(letters))) {
-        $("#name").css("border", "4px solid red");
-        return false;
-    }
-    return true;
+  let name = $("#name").val();
+  let letters = /^[A-Za-z ]+$/;
+  if (!(name.match(letters))) {
+    $("#name").css("border", "4px solid red");
+    return false;
+  }
+  return true;
 }
 
 function validatePhone() {
-    let phone = $("#phoneNum").val();
-    if (phone.length == 0) {
-        $("#phoneCode").val("")
-        return true;
-    } else if (!isNaN(phone) && phone.length <= 12) {
-        return true;
-    }
-    $("#phoneNum").css("border", "4px solid red");
-    return false;
+  let phone = $("#phoneNum").val();
+  if (phone.length == 0) {
+    $("#phoneCode").val("")
+    return true;
+  } else if (!isNaN(phone) && phone.length <= 12) {
+    return true;
+  }
+  $("#phoneNum").css("border", "4px solid red");
+  return false;
 }
 
 function validateEmail() {
-    let mail = $("#email").val();
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-        return true;
-    }
-    $("#email").css("border", "4px solid red");
-    return false;
+  let mail = $("#email").val();
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+    return true;
+  }
+  $("#email").css("border", "4px solid red");
+  return false;
 }
 
 $("#form-new").submit(function (e) {
-    e.preventDefault();
-    let flg = 1;
-    if (!validateName()) { flg = 0; }
-    if (!validatePhone()) { flg = 0; }
-    if (!validateEmail()) { flg = 0; }
-    let email_content = `<!doctype html>
+  e.preventDefault();
+  let flg = 1;
+  if (!validateName()) { flg = 0; }
+  if (!validatePhone()) { flg = 0; }
+  if (!validateEmail()) { flg = 0; }
+  let email_content = `<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width">
@@ -136,6 +136,8 @@ $("#form-new").submit(function (e) {
       }
     }
     </style>
+    `
+  let email_formattable_content = `
   </head>
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
     <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
@@ -225,37 +227,38 @@ $("#form-new").submit(function (e) {
   </body>
 </html>
 `
-    let phoneCode = $("#phoneCode").val()
-    let phone = $("#phoneNum").val()
-    if (flg) {
-        data = {
-            'name': $("#name").val(),
-            'email': $("#email").val(),
-            'phone': phoneCode + phone,
-            'hackerrank_username': $("#hacker_id").val(),
-            'country': $("#country option:selected").html().replace(/ \(\+?\d+\)/, ''),
-            'email_content': email_content,
-            'email_content_fields': 'name',
-            'event': 'Battle of Vars, 2020',
-            'db': 'bov_2020',
-            'date': '12th April, 2020',
-            'no_qr': '',
-        }
-        $('#phoneCode').val($("#country").val())
-
-        $.post(
-            "https://hades.thescriptgroup.in/submit",
-            data,
-            function (data, status) {
-                alert(data);
-                $("#name").val("");
-                $("#email").val("");
-                $("#hacker_id").val("");
-                $("#phoneNum").val("");
-            }
-        );
-    } else {
-        alert("Please check the highlighted inputs")
-        return false;
+  let phoneCode = $("#phoneCode").val()
+  let phone = $("#phoneNum").val()
+  if (flg) {
+    data = {
+      'name': $("#name").val(),
+      'email': $("#email").val(),
+      'phone': phoneCode + phone,
+      'hackerrank_username': $("#hacker_id").val(),
+      'country': $("#country option:selected").html().replace(/ \(\+?\d+\)/, ''),
+      'email_content': email_content,
+      'email_content_fields': 'name',
+      'email_formattable_content': email_formattable_content,
+      'event': 'Battle of Vars, 2020',
+      'db': 'bov_2020',
+      'date': '12th April, 2020',
+      'no_qr': '',
     }
+    $('#phoneCode').val($("#country").val())
+
+    $.post(
+      "https://hades.thescriptgroup.in/submit",
+      data,
+      function (data, status) {
+        alert(data);
+        $("#name").val("");
+        $("#email").val("");
+        $("#hacker_id").val("");
+        $("#phoneNum").val("");
+      }
+    );
+  } else {
+    alert("Please check the highlighted inputs")
+    return false;
+  }
 });
