@@ -35,9 +35,9 @@ function validateEmail() {
   return false;
 }
 
-function alertModal(message) {  
-  $("#alert-display").css('display','block');
-  $("#alert-content").text(message);
+function alertModal(message) {
+    $("#modalContent").html(message);
+    $('#SubmitModal').modal()
 }
 
 $("#form-new").submit(function (e) {

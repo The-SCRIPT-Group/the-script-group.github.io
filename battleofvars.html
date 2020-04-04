@@ -31,15 +31,14 @@
     <title>Battle of Vars</title>
 </head>
 
-<body
-    style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
+<body style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 img my-auto" style="height: 100vh;">
                     <div class="padding"></div>
                     <img class="mx-auto my-auto" src="images/battleofvarslogo.png"
-                        style="width: inherit;height: auto; max-width:660px" alt="" />
+                         style="width: inherit;height: auto; max-width:660px" alt="" />
                     <a class="row arrow-down mx-auto" href="#form"></a>
                     <div class="padding"></div>
                 </div>
@@ -49,28 +48,28 @@
                         <div class="col-md-9 mx-auto">
                             <p class="field">Name*</p>
                             <input type="text" name="name" class="form-control mb-4 new-input"
-                                placeholder="Enter your name" maxlength="30" id="name"
-                                onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateName()"
-                                required>
+                                   placeholder="Enter your name" maxlength="30" id="name"
+                                   onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateName()"
+                                   required>
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p class="field">Email*</p>
                             <input type="email" name="email" class="form-control mb-4 new-input"
-                                placeholder="Enter your email address" maxlength="50" id="email" required
-                                onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateEmail()">
+                                   placeholder="Enter your email address" maxlength="50" id="email" required
+                                   onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateEmail()">
                         </div>
                         <div class="col-md-9 mx-auto">
 
                             <p>
-                                <p class="d-inline field">HackerRank ID*</p>
-                                <a class="d-inline text-dark field" href="https://www.hackerrank.com"
-                                    data-toggle="tooltip" title="Click here to register" target="_blank">
-                                    <i class=" my-auto fa fa-question-circle fa-sm"></i>
-                                </a>
+                            <p class="d-inline field">HackerRank ID*</p>
+                            <a class="d-inline text-dark field" href="https://www.hackerrank.com"
+                               data-toggle="tooltip" title="Click here to register" target="_blank">
+                                <i class=" my-auto fa fa-question-circle fa-sm"></i>
+                            </a>
                             </p>
                             <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
-                                placeholder="Enter your HackerRank ID" id="hacker_id" maxlength="50" required
-                                pattern="^\w*$" />
+                                   placeholder="Enter your HackerRank ID" id="hacker_id" maxlength="50" required
+                                   pattern="^\w*$" />
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p class="field">Country*</p>
@@ -296,10 +295,10 @@
                             <p class="field">Phone number</p>
                             <div class="d-flex">
                                 <input type="text" id="phoneCode" class="form-control mb-4 new-input text-center"
-                                    maxlength="6" style="width:1px;padding:5px" value="+91"
-                                    onfocus=' $(this).css("border", "1px solid black")' disabled />
+                                       maxlength="6" style="width:1px;padding:5px" value="+91"
+                                       onfocus=' $(this).css("border", "1px solid black")' disabled />
                                 <input type="text" id="phoneNum" class="form-control mb-4 new-input"
-                                    onfocus=' $(this).css("border", "1px solid black")' maxlength="12" />
+                                       onfocus=' $(this).css("border", "1px solid black")' maxlength="12" />
                             </div>
                         </div>
                         <br>
@@ -307,14 +306,14 @@
                             <label class="form-check-label" for="privpolicy">
                                 By using this service, you hereby consent to our
                                 <a href="https://thescriptgroup.in/privacypolicy" class="col btn btn-link" role="button"
-                                    style="margin-left: -0.75em;">
+                                   style="margin-left: -0.75em;">
                                     privacy policy.
                                 </a>
                             </label>
                         </div>
                         <div class="text-center">
                             <button type="submit" style="display:block;background-color:#000000;border-radius:30px "
-                                id="submitButton" class="mx-auto btn btn-dark text-light btn-rounded my-4">
+                                    id="submitButton" class="mx-auto btn btn-dark text-light btn-rounded my-4">
                                 Submit
                             </button>
                             <br>
@@ -373,18 +372,15 @@
         </div>
     </section>
 
-    
-    <!--Modallllll-->
-    <div id="alert-display" class="w3-modal">
-        <div class="w3-modal-content w3-animate-top w3-card-4 w3-xlarge" style="width: 50%">
-            <header class="w3-container w3-aqua w3-center">
-                <span onclick="document.getElementById('alert-display').style.display='none'"
-                    class="w3-button w3-display-topright">&times;</span>
-                <h3>thescriptgroup.in says:</h3>
-            </header>
-            <div class="w3-container w3-center">
-                <!--Alert content set by alertModal()-->
-                <p id="alert-content"></p>
+
+    <div class="modal " id="SubmitModal" tabindex="-1" role="alertdialog">
+        <div class="modal-dialog rounded">
+            <div class="modal-content" style="border-radius:30px">
+                <div class="modal-body" id="modalContent">
+                </div>
+                <div class="align-items-center mx-auto">
+                    <button type="button" class="btn btn-rounded btn-dark" style="border-radius:30px" data-dismiss="modal">Ok</button>
+                </div>
             </div>
         </div>
     </div>
@@ -398,11 +394,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/countrycode.js"></script>
 </body>
 </html>
