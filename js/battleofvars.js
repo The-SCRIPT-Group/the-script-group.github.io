@@ -13,11 +13,14 @@ function validateName() {
 }
 
 function validatePhone() {
+    debugger
     let phone = $("#phoneNum").val();
-    if (phone.length == 0) { return true; }
-    let country = $("#country").val()
-    let phoneNum = phone.replace('+' + country, '');
-    if (phoneNum.length == 10 || phoneNum.length == 0) { return true; }
+    if (phone.length == 0) {
+        $("#phoneCode").val("")
+        return true;
+    } else if (phone.length == 10) {
+        return true;
+    }
     $("#phoneNum").css("border", "4px solid red");
     return false;
 }
@@ -54,13 +57,13 @@ $("#form-new").submit(function (e) {
         <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
     </ul>
     <img src="https://thescriptgroup.in/images/LogoB-trans.png" class="script-logo  mx-auto">`
-
+    let phoneCode = $("#phoneCode").val()
     let phone = $("#phoneNum").val()
     if (flg) {       
         data = {
             'name': $("#name").val(),
             'email': $("#email").val(),
-            'phone': phone.length > 5 ? phone : "",
+            'phone': phoneCode+phone,
             'hackerrank_username': $("#hacker_id").val(),
             'country': $("#country option:selected").html().replace(/ \(\+?\d+\)/, ''),
             'email_content': email_content,
@@ -79,7 +82,7 @@ $("#form-new").submit(function (e) {
                 $("#name").val("");
                 $("#email").val("");
                 $("#hacker_id").val("");
-                $("#phoneNum").val("+" + $("#country").val());
+                $("#phoneNum").val("");
             }
         );
     } else {

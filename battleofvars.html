@@ -48,14 +48,14 @@
                             <p class="field">Name*</p>
                             <input type="text" name="name" class="form-control mb-4 new-input"
                                    placeholder="Enter your name" maxlength="30" id="name"
-                                   onfocus=' $("#name").css("border", "1px solid black");' onfocusout="validateName()"
+                                   onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateName()"
                                    required>
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p class="field">Email*</p>
                             <input type="email" name="email" class="form-control mb-4 new-input"
                                    placeholder="Enter your email address" maxlength="50" id="email" required
-                                   onfocus=' $("#email").css("border", "1px solid black");' onfocusout="validateEmail()">
+                                   onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateEmail()">
                         </div>
                         <div class="col-md-9 mx-auto">
 
@@ -292,10 +292,18 @@
                         <br>
                         <div class="col-md-9 mx-auto">
                             <p class="field">Phone number</p>
-                            <input id="phoneNum" type="text" name="phone" class="form-control mb-4 new-input"
+                            <div class="input-group">
+                                <input type="text" id="phoneCode" class="form-control mb-4 new-input d-inline" style="width:25%" value="+91"
+                                       onfocus=' $(this).css("border", "1px solid black")' />
+                                <input type="text" id="phoneNum" class="form-control mb-4 new-input d-inline" style="width:75%"
+                                       onfocus=' $(this).css("border", "1px solid black")' />
+                            </div>
+                            <!--<input id="phoneNum" type="text" name="phone" class="form-control mb-4 new-input"
                                    placeholder="Enter phone number" value="+91" onfocusout="validatePhone()"
-                                   onfocus=' $("#phoneNum").css("border", "1px solid black");'>
+                                   onfocus=' $(this).css("border", "1px solid black");'>-->
+
                         </div>
+                        
                         <br>
                         <div>
                             <label class="form-check-label" for="privpolicy">
