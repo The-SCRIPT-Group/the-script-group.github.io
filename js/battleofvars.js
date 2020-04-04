@@ -13,7 +13,6 @@ function validatePhone() {
     if (phone.length == 0) { return true; }
     let country = $("#country").val()
     let phoneNum = phone.replace('+' + country, '');
-    console.log(phoneNum);
     if (phoneNum.length == 10 || phoneNum.length == 0) { return true; }
     $("#phoneNum").css("border", "4px solid red");
     return false;
@@ -51,13 +50,15 @@ $("#form-new").submit(function (e) {
         <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
     </ul> 
     <img src="https://thescriptgroup.in/images/LogoB-Trans.png" class="script-logo  mx-auto">`
+
+    let phone = $("#phoneNum").val()
     if (flg) {
         data = {
             'name': $("#name").val(),
             'email': $("#email").val(),
-            'phone': $("#phoneNum").val(),
+            'phone': phone.length > 5 ? phone : "",
             'hackerrank_username': $("#hacker_id").val(),
-            'country': $("#country").val(),
+            'country': $("#country option:selected").html().replace(/ \(\+?\d+\)/, ''),
             'email_content': email_content,
             'email_content_fields': 'name',
             'event': 'Battle of Vars, 2020',
@@ -65,7 +66,7 @@ $("#form-new").submit(function (e) {
             'date': '12th April, 2020',
             'no_qr': '',
         }
-   
+
         $.post(
             "https://hades.thescriptgroup.in/submit",
             data,
