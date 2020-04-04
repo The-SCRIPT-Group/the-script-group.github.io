@@ -48,11 +48,15 @@ $("#form-new").submit(function (e) {
         <li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last solution resulting in a higher score</li>
         <li><b>Unrestricted Internet access allowed</b>. Yup, that's right! You can technically copy code from sites, but you won't learn anything.</li>
         <li>Top 2 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st and 2nd).</li>
-    </ul> 
+    </ul>
     <img src="https://thescriptgroup.in/images/LogoB-Trans.png" class="script-logo  mx-auto">`
 
     let phone = $("#phoneNum").val()
     if (flg) {
+        $('#country option').val(function(){
+           return $(this).text();
+        });
+        
         data = {
             'name': $("#name").val(),
             'email': $("#email").val(),
