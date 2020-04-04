@@ -19,7 +19,7 @@ function validatePhone() {
     if (phone.length == 0) {
         $("#phoneCode").val("")
         return true;
-    } else if (phone.length == 10) {
+    } else if (!isNaN(phone) && phone.length <= 12) {
         return true;
     }
     $("#phoneNum").css("border", "4px solid red");
@@ -74,7 +74,7 @@ $("#form-new").submit(function (e) {
             'date': '12th April, 2020',
             'no_qr': '',
         }
-
+        
         $.post(
             "https://hades.thescriptgroup.in/submit",
             data,
