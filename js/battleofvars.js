@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
 function validateName() {
     let name = $("#name").val();
     let letters = /^[A-Za-z ]+$/;

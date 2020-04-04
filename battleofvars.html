@@ -32,7 +32,9 @@
 
 <body
     style=" background-repeat:no-repeat; overflow-x: hidden;background-image:linear-gradient(to right, rgba(17,141,193,1), rgba(126,249,255,1));">
-
+    <script>
+        $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
+    </script>
     <section>
         <div class="container">
             <div class="row">
@@ -59,7 +61,11 @@
                                 placeholder="Enter your email address" maxlength="50" id="email" required onfocus=' $("#email").css("border", "1px solid black");' onfocusout="validateEmail()">
                         </div>
                         <div class="col-md-9 mx-auto">
-                            <p>Hackerrank ID*</p>
+                            
+                            <div >
+                                <p class="d-inline">Hackerrank ID*</p>
+                                <a class="d-inline text-dark" href="https://www.hackerrank.com" data-toggle="tooltip" title="Click here to register"><i class=" my-auto fa fa-question-circle fa-sm"></i></a>
+                            </div>
                             <input type="text" name="hackerrank_username" class="form-control mb-4 new-input"
                                 placeholder="Enter your Hackerrank ID" id="hacker_id" maxlength="50" required pattern="^\w*$" />
                         </div>
