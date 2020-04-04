@@ -36,7 +36,7 @@ function validateEmail() {
 }
 
 function alertModal(message) {  
-  $("#alert-display").style.display = 'block';
+  $("#alert-display").css('display','block');
   $("#alert-content").text(message);
 }
 
