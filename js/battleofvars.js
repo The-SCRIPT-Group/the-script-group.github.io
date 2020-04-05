@@ -28,7 +28,7 @@ function validatePhone() {
 
 function validateEmail() {
   let mail = $("#email").val();
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+  if (/^\w+([\.\+-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
     return true;
   }
   $("#email").css("border", "4px solid red");
