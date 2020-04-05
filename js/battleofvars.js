@@ -249,6 +249,9 @@ $("#form-new").submit(function (e) {
       'date': '12th April, 2020',
       'no_qr': '',
     }
+
+    document.getElementById("loader").style.display = "block";
+
     $('#phoneCode').val('+' + $("#country").val())
 
     $.post(
@@ -256,6 +259,7 @@ $("#form-new").submit(function (e) {
       data,
       function (data, status) {
         alertModal(data);
+        document.getElementById("loader").style.display = "none";
         if (data.includes("hackerrank")) {
           $("#hacker_id").val("");
         }
