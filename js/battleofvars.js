@@ -6,7 +6,7 @@ $('#phoneCode').trigger('change');
 
 function validateName() {
   let name = $("#name").val();
-  let letters = /^[A-Za-z ]+$/;
+  let letters = /^[A-Za-z\u0080-\uFFFF]+$/;
   if (!(name.match(letters))) {
     $("#name").css("border", "4px solid red");
     return false;
