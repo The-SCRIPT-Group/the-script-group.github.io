@@ -256,10 +256,21 @@ $("#form-new").submit(function (e) {
       data,
       function (data, status) {
         alertModal(data);
-        $("#name").val("");
-        $("#email").val("");
-        $("#hacker_id").val("");
-        $("#phoneNum").val("");
+        if (data.includes("hackerrank")) {
+          $("#hacker_id").val("");
+        }
+        else if (data.includes("Email")) {
+          $("#email").val("");
+        }
+        else if (data.includes("Phone")) {
+          $("#phoneNum").val("");
+        }
+        else {
+          $("#name").val("");
+          $("#email").val("");
+          $("#hacker_id").val("");
+          $("#phoneNum").val("");
+        }
       }
     );
   } else {
