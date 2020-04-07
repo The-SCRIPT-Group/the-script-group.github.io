@@ -6,7 +6,7 @@ $('#phoneCode').trigger('change');
 
 function validateName() {
   let name = $("#name").val();
-  let letters = /^[A-Za-z ]+$/;
+  let letters = /^[A-Za-z\u0080-\uFFFF ]+$/;
   if (!(name.match(letters))) {
     $("#name").css("border", "4px solid red");
     return false;
@@ -152,7 +152,7 @@ $("#form-new").submit(function (e) {
           <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;"></span>
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Battle of Vars : Fight from 127.0.0.1</span>
             <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
 
               <!-- START MAIN CONTENT AREA -->
@@ -249,6 +249,9 @@ $("#form-new").submit(function (e) {
       'date': '12th April, 2020',
       'no_qr': '',
     }
+
+    document.getElementById("loader").style.display = "block";
+
     $('#phoneCode').val('+' + $("#country").val())
 
     $.post(
@@ -256,6 +259,7 @@ $("#form-new").submit(function (e) {
       data,
       function (data, status) {
         alertModal(data);
+        document.getElementById("loader").style.display = "none";
         if (data.includes("hackerrank")) {
           $("#hacker_id").val("");
         }

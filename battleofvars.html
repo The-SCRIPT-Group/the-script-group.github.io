@@ -2,11 +2,20 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149853301-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-149853301-1');
+	</script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="height=device-height, initial-scale=1">
-
+    <meta property="og:image"  content="images/bovposter.png"/>
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/input-autogrow.js"></script>
@@ -43,11 +52,12 @@
                     <a class="row arrow-down mx-auto" href="#form"></a>
                     <div class="padding"></div>
                 </div>
-                <div class="col-lg-5 form" id="form">
+                <div class="col-lg-5 form w3-display-container" id="form">
+                    <div class="w3-display-middle" id="loader" style="display: none;"></div>
                     <form class="my-5 mx-auto text-center z-depth-5" method="post" id="form-new">
                         <h3 style="color: black; font-size: 40px;" class="font-weight-bold my-3 pb-1">REGISTER</h3>
                         <div class="col-md-9 mx-auto">
-                            <p class="field">Name*</p>
+                            <p class="field">Full Name*</p>
                             <input type="text" name="name" class="form-control mb-4 new-input"
                                    placeholder="Enter your name" maxlength="30" id="name"
                                    onfocus=' $(this).css("border", "1px solid black");' onfocusout="validateName()"
@@ -62,7 +72,7 @@
                         <div class="col-md-9 mx-auto">
 
                             <p>
-                            <p class="d-inline field">HackerRank ID*</p>
+                            <p class="d-inline field">HackerRank Username*</p>
                             <a class="d-inline text-dark field" href="https://www.hackerrank.com"
                                data-toggle="tooltip" title="Click here to register" target="_blank">
                                 <i class=" my-auto fa fa-question-circle fa-sm"></i>
@@ -74,7 +84,7 @@
                         </div>
                         <div class="col-md-9 mx-auto">
                             <p class="field">Country*</p>
-                            <select id="country" name="country" class="browser-default custom-select new-input">
+                            <select id="country" name="country" class="browser-default custom-select new-input">                                                                
                                 <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                                 <option data-countryCode="AD" value="376">Andorra (+376)</option>
                                 <option data-countryCode="AO" value="244">Angola (+244)</option>
@@ -121,7 +131,7 @@
                                 <option data-countryCode="CU" value="53">Cuba (+53)</option>
                                 <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
                                 <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
-                                <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+                                <option data-countryCode="CZ" value="420">Czech Republic (+420)</option>
                                 <option data-countryCode="DK" value="45">Denmark (+45)</option>
                                 <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
                                 <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
@@ -221,6 +231,7 @@
                                 <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
                                 <option data-countryCode="NO" value="47">Norway (+47)</option>
                                 <option data-countryCode="OM" value="968">Oman (+968)</option>
+                                <option data-countryCode="PK" value="92">Pakistan (+92)</option>
                                 <option data-countryCode="PW" value="680">Palau (+680)</option>
                                 <option data-countryCode="PA" value="507">Panama (+507)</option>
                                 <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
@@ -253,6 +264,7 @@
                                 <option data-countryCode="SH" value="290">St. Helena (+290)</option>
                                 <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
                                 <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+                                <option data-countryCode="VC" value="1784">St. Vincent and the Grenadines (+1784)</option>
                                 <option data-countryCode="SD" value="249">Sudan (+249)</option>
                                 <option data-countryCode="SR" value="597">Suriname (+597)</option>
                                 <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
@@ -310,6 +322,7 @@
                                    style="margin-left: -0.75em;">
                                     privacy policy.
                                 </a>
+                                You also hereby agree to be above 13 years of age, or have your parent's permission to participate.
                             </label>
                         </div>
                         <div class="text-center">
@@ -317,6 +330,9 @@
                                     id="submitButton" class="mx-auto btn btn-dark text-light btn-rounded my-4">
                                 Submit
                             </button>
+                            <div class=" text-right" style="width:90%">
+                                <sub class="text-content">*</sub> : required
+                            </div>
                             <br>
                         </div>
                     </form>
