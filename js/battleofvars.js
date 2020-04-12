@@ -46,7 +46,9 @@ $("#form-new").submit(function (e) {
   if (!validateName()) { flg = 0; }
   if (!validatePhone()) { flg = 0; }
   if (!validateEmail()) { flg = 0; }
-  let email_content = `<!doctype html>
+  let email_content = `
+
+<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width">
@@ -141,7 +143,7 @@ $("#form-new").submit(function (e) {
       }
     }
     </style>
-    </head>
+  </head>
     `
   let email_formattable_content = `
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
@@ -152,7 +154,7 @@ $("#form-new").submit(function (e) {
           <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Battle of Vars : Fight from 127.0.0.1</span>
+            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
             <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
 
               <!-- START MAIN CONTENT AREA -->
@@ -161,23 +163,22 @@ $("#form-new").submit(function (e) {
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" align="center"><img src="https://raw.githubusercontent.com/The-SCRIPT-Group/Website/master/images/bovposter.png" height="400">
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" align="center"><img src="https://raw.githubusercontent.com/The-SCRIPT-Group/Website/master/images/bovreduced.jpg" height="480">
                         </p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering to participate in Battle of Vars hosted by The S.C.R.I.P.T. Group.</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020. Be sure to prepare for the competition and review the event information below.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}.
+                          <br/>
+                          Battle of Vars is here! Wish you all the best! 
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;"><b>Please use the button below to participate.</b></p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Alternatively, use this link: <a href="https://hackerrank.com/battle-of-vars-2020">https://hackerrank.com/battle-of-vars-2020</a></p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">The event will begin at 09:30 AM IST / 04:00 AM GMT on April 12th 2020.
+                          <br/>
+                          <br/>
+                          <h3><b>It's Picture Time!</b></h3>
+                          Send us a selfie with your Battle of Vars stations (your computer setup), and get featured on our Instagram posts and stories! Follow <a href="https://instagram.com/script.ig">@script.ig</a> for more details.
+                        </p>
                         <br/>
-                        <p style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; Margin-bottom: 15px;">RULES:</p>
                         
-                        <ul>
-                            <li>Challenges are not necessarily straightforward. For eg: they might be stated as a story or a real-life situation.</li>
-        <li>Each challenge has a pre-determined score.</li>
-        <li>Your score depends on the number of test cases your submission will successfully pass.</li>
-        <li>Each challenge will have some sample test cases that you can check your code for before you submit. HackerRank also has a system to test your program against custom inputs directly on their platform. You can test locally as well, but final code submission is to be done on HackerRank.</li>
-        <li>If a participant submits more than one solution per challenge, then the participant’s score will reflect the highest score achieved.</li>
-        <li>Participants are ranked by score. If two or more participants achieve the same score, then the tie is broken by the total time taken to submit the last solution resulting in a higher score.</li>
-        <li>Top 3 scorers (final decision as per HackerRank leaderboard) after the allotted time will be declared winners (1st, 2nd and 3rd).</li>
-                        </ul>
                         <br/>                        
                         
                         
@@ -188,7 +189,7 @@ $("#form-new").submit(function (e) {
                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://instagram.com/script.ig" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Follow Us</a> </td>
+                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://hackerrank.com/battle-of-vars-2020" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Visit Competition</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
