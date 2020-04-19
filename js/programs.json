@@ -1,151 +1,406 @@
 {
-    "cet":[
-        ["btech-cse","BTech. Computer Science and Engineering"],
-        ["btech-csbs","BTech. Computer Science and Business Systems"],
-        ["mtech-cse","MTech. Computer Science and Engineering"],
-        ["phd-cse","Ph.d Computer Science and Engineering"]
+    "cet": [
+        [
+            "btech-cse",
+            "BTech. Computer Science and Engineering"
+        ],
+        [
+            "btech-csbs",
+            "BTech. Computer Science and Business Systems"
+        ],
+        [
+            "mtech-cse",
+            "MTech. Computer Science and Engineering"
+        ],
+        [
+            "phd-cse",
+            "Ph.d Computer Science and Engineering"
+        ]
     ],
-    "ece":[
-        ["btech-ece","BTech. Electronics & Communication Engineering"],
-        ["mtech-ece","MTech. Electronics & Communication Engineering"],
-        ["phd-ece","Ph.d Electronics & Communication Engineering"]
+    "ece": [
+        [
+            "btech-ece",
+            "BTech. Electronics & Communication Engineering"
+        ],
+        [
+            "mtech-ece",
+            "MTech. Electronics & Communication Engineering"
+        ],
+        [
+            "phd-ece",
+            "Ph.d Electronics & Communication Engineering"
+        ]
     ],
     "mech": [
-        ["btech-me","BTech. Mechanical Engineering"],
-        ["btech-robotics","BTech. Robotics and Automation Engineering"],
-        ["mtech-me","MTech. Mechanical Engineering"],
-        ["phd-me","Ph.d Mechanical Engineering"]
+        [
+            "btech-me",
+            "BTech. Mechanical Engineering"
+        ],
+        [
+            "btech-robotics",
+            "BTech. Robotics and Automation Engineering"
+        ],
+        [
+            "mtech-me",
+            "MTech. Mechanical Engineering"
+        ],
+        [
+            "phd-me",
+            "Ph.d Mechanical Engineering"
+        ]
     ],
-    "civil":[
-        ["btech-ce","BTech. Civil Engineering"],
-        ["mtech-ce","MTech. Civil Engineering"],
-        ["phd-ce","Ph.d Civil Engineering"]
+    "civil": [
+        [
+            "btech-ce",
+            "BTech. Civil Engineering"
+        ],
+        [
+            "mtech-ce",
+            "MTech. Civil Engineering"
+        ],
+        [
+            "phd-ce",
+            "Ph.d Civil Engineering"
+        ]
     ],
-    "ee":[
-        ["btech-ee","BTech. Electrical Engneering"]
+    "ee": [
+        [
+            "btech-ee",
+            "BTech. Electrical Engneering"
+        ]
     ],
-    "chem":[
-        ["btech-chem","BTech. Chemical Engineering"],
-        ["phd-chem","Ph.d Chemical Engineering"]
+    "chem": [
+        [
+            "btech-chem",
+            "BTech. Chemical Engineering"
+        ],
+        [
+            "phd-chem",
+            "Ph.d Chemical Engineering"
+        ]
     ],
     "polymer": [
-        ["btech-poly","Btech. Polymer Engineering"],
-        ["mtech-poly","Mtech. Polymer Engineering"]
+        [
+            "btech-poly",
+            "Btech. Polymer Engineering"
+        ],
+        [
+            "mtech-poly",
+            "Mtech. Polymer Engineering"
+        ]
     ],
-    "petroleum" : [
-        ["btech-petro","Btech. Petroleum Engineering"],
-        ["mtech-petro","MTech. Petroleum Engineering"],
-        ["phd-petro","Ph.d Petroleum Engineering"]
+    "petroleum": [
+        [
+            "btech-petro",
+            "Btech. Petroleum Engineering"
+        ],
+        [
+            "mtech-petro",
+            "MTech. Petroleum Engineering"
+        ],
+        [
+            "phd-petro",
+            "Ph.d Petroleum Engineering"
+        ]
     ],
     "design": [
-        ["bdes-product","BDes. Product Design"],
-        ["bdes-ux","BDes. User Experience Design"],
-        ["bdes-vc","BDes. Visual Communication Design"]
+        [
+            "bdes-product",
+            "BDes. Product Design"
+        ],
+        [
+            "bdes-ux",
+            "BDes. User Experience Design"
+        ],
+        [
+            "bdes-vc",
+            "BDes. Visual Communication Design"
+        ]
     ],
-    "economics":[
-        ["bsc-hons-economics","B.Sc. (Hons.) Economics"],
-        ["msc-economics","M.Sc. Economics"]
+    "economics": [
+        [
+            "bsc-hons-economics",
+            "B.Sc. (Hons.) Economics"
+        ],
+        [
+            "msc-economics",
+            "M.Sc. Economics"
+        ]
     ],
-    "management-ug":[
-        ["bba","BBA-Bachelor of Business Administration"],
-        ["bba-ib","BBA-International Business"],
-        ["bba-ca","BBA-Computer Application"],
-        ["bba-em","BBA-Event Management"],
-        ["bba-gb","BBA-Global e-Business"]
+    "management-ug": [
+        [
+            "bba",
+            "BBA-Bachelor of Business Administration"
+        ],
+        [
+            "bba-ib",
+            "BBA-International Business"
+        ],
+        [
+            "bba-ca",
+            "BBA-Computer Application"
+        ],
+        [
+            "bba-em",
+            "BBA-Event Management"
+        ],
+        [
+            "bba-gb",
+            "BBA-Global e-Business"
+        ]
     ],
     "management-pg": [
-        ["mba-general","MBA General Management"],
-        ["mba-marketing","MBA Marketing Management"],
-        ["mba-finance","MBA Finance Management"],
-        ["mba-hr","MBA HR Management"],
-        ["mba-operation","MBA Operation Management"],
-        ["mba-ib","MBA International Business"],
-        ["mba-banking-and-finance","MBA Banking & Financial Services"],
-        ["mba-telecom","MBA Telecom Management"],
-        ["mba-construction-project-mgmt","MBA Construction & Project Management"],
-        ["mba-innovation-enterpreneurship","MBA Innovation & Entrepreneurship"],
-        ["mca","MCA Master of Computer Applications"],
-        ["mba-corporate-social-responsibility","MBA Corporate Social Responsibility"],
-        ["mba-hospital-healthcare","MBA Hospital & Healthcare Management"],
-        ["mba-sports","MBA Sports Management"]
+        [
+            "mba-general",
+            "MBA General Management"
+        ],
+        [
+            "mba-marketing",
+            "MBA Marketing Management"
+        ],
+        [
+            "mba-finance",
+            "MBA Finance Management"
+        ],
+        [
+            "mba-hr",
+            "MBA HR Management"
+        ],
+        [
+            "mba-operation",
+            "MBA Operation Management"
+        ],
+        [
+            "mba-ib",
+            "MBA International Business"
+        ],
+        [
+            "mba-banking-and-finance",
+            "MBA Banking & Financial Services"
+        ],
+        [
+            "mba-telecom",
+            "MBA Telecom Management"
+        ],
+        [
+            "mba-construction-project-mgmt",
+            "MBA Construction & Project Management"
+        ],
+        [
+            "mba-innovation-enterpreneurship",
+            "MBA Innovation & Entrepreneurship"
+        ],
+        [
+            "mca",
+            "MCA Master of Computer Applications"
+        ],
+        [
+            "mba-corporate-social-responsibility",
+            "MBA Corporate Social Responsibility"
+        ],
+        [
+            "mba-hospital-healthcare",
+            "MBA Hospital & Healthcare Management"
+        ],
+        [
+            "mba-sports",
+            "MBA Sports Management"
+        ]
     ],
-    "cs-science":[
-        ["bsc-sc","B.Sc. (Computer Science)"],
-        ["bca-science","BCA (Science)"],
-        ["mca-science","MCA (Science)"],
-        ["msc-cs","M.Sc. (Computer Science)"],
-        ["msc-ds","M.Sc. (Data Science & Big Data Analytics)"]
+    "cs-science": [
+        [
+            "bsc-sc",
+            "B.Sc. (Computer Science)"
+        ],
+        [
+            "bca-science",
+            "BCA (Science)"
+        ],
+        [
+            "mca-science",
+            "MCA (Science)"
+        ],
+        [
+            "msc-cs",
+            "M.Sc. (Computer Science)"
+        ],
+        [
+            "msc-ds",
+            "M.Sc. (Data Science & Big Data Analytics)"
+        ]
     ],
     "maths-science": [
-        ["bsc-maths-stats","B.Sc. (Computational Mathematics & Statistics)"],
-        ["msc-maths","M.Sc. (Mathematics)"],
-        ["msc-stats","M.Sc. (Statistics)"]
+        [
+            "bsc-maths-stats",
+            "B.Sc. (Computational Mathematics & Statistics)"
+        ],
+        [
+            "msc-maths",
+            "M.Sc. (Mathematics)"
+        ],
+        [
+            "msc-stats",
+            "M.Sc. (Statistics)"
+        ]
     ],
-    "physics-science":[
-        ["msc-photonics","M.Sc. Physics (Photonics)"]
+    "physics-science": [
+        [
+            "msc-photonics",
+            "M.Sc. Physics (Photonics)"
+        ]
     ],
-    "chem-science":[
-        ["msc-ipc","M.Sc. Industrial Polymer Chemistry"]
+    "chem-science": [
+        [
+            "msc-ipc",
+            "M.Sc. Industrial Polymer Chemistry"
+        ]
     ],
-    "bio-science":[
-        ["msc-biotech","M.Sc Biotechnology"]
+    "bio-science": [
+        [
+            "msc-biotech",
+            "M.Sc Biotechnology"
+        ]
     ],
-    "pharmacy":[
-        ["bpharm","B.Pharm Bachelor of Pharmacy"],
-        ["mpharm","M.Pharm Master of Pharmacy"],
-        ["phd-pharmacy","Doctorate Ph.d"],
-        ["pgdra","PGDRA Diploma in Regulatory Services"     ]   
+    "pharmacy": [
+        [
+            "bpharm",
+            "B.Pharm Bachelor of Pharmacy"
+        ],
+        [
+            "mpharm",
+            "M.Pharm Master of Pharmacy"
+        ],
+        [
+            "phd-pharmacy",
+            "Doctorate Ph.d"
+        ],
+        [
+            "pgdra",
+            "PGDRA Diploma in Regulatory Services"
+        ]
     ],
-    "commerce":[
-        ["bcom","B.Com"],
-        ["bcom-acca","B.Com (Hons) International Accounting & Finance"],
-        ["mcom","M.Com"]
+    "commerce": [
+        [
+            "bcom",
+            "B.Com"
+        ],
+        [
+            "bcom-acca",
+            "B.Com (Hons) International Accounting & Finance"
+        ],
+        [
+            "mcom",
+            "M.Com"
+        ]
     ],
     "education": [
-        ["bed","B.Ed Bachelor of Education"],
-        ["med","M.Ed Master of Education"]
+        [
+            "bed",
+            "B.Ed Bachelor of Education"
+        ],
+        [
+            "med",
+            "M.Ed Master of Education"
+        ]
     ],
-    "liberal-arts":[
-        ["bala","BA Liberal Arts"],
-        ["ba-hons","BA Hons"]
+    "liberal-arts": [
+        [
+            "bala",
+            "BA Liberal Arts"
+        ],
+        [
+            "ba-hons",
+            "BA Hons"
+        ]
     ],
     "fine-arts": [
-        ["bfa","BFA Bachelor of Fine Arts"]
+        [
+            "bfa",
+            "BFA Bachelor of Fine Arts"
+        ]
     ],
-    "media":[
-        ["ba-journalism","BA Journalism & Mass Communication"],
-        ["ma-journalism","MA Journalism & Mass Communication"]
+    "media": [
+        [
+            "ba-journalism",
+            "BA Journalism & Mass Communication"
+        ],
+        [
+            "ma-journalism",
+            "MA Journalism & Mass Communication"
+        ]
     ],
-    "photography":[
-        ["ba-photography","BA Photography"]
+    "photography": [
+        [
+            "ba-photography",
+            "BA Photography"
+        ]
     ],
-    "law":[
-        ["bba-llb","BBA, LL.B. (Hons.)"],
-        ["llb","LL.B."],
-        ["bcom-llb","B.Com, LL.B. (Hons.)"]
+    "law": [
+        [
+            "bba-llb",
+            "BBA, LL.B. (Hons.)"
+        ],
+        [
+            "llb",
+            "LL.B."
+        ],
+        [
+            "bcom-llb",
+            "B.Com, LL.B. (Hons.)"
+        ]
     ],
-    "government":[
-        ["mpg","MA (Political Leadership & Government)"]
+    "government": [
+        [
+            "mpg",
+            "MA (Political Leadership & Government)"
+        ]
     ],
-    "public-policy":[
-        ["ba-government-administration","BA (Government and Administration)"],
-        ["msc-public-policy","MSc Public Policy"]
+    "public-policy": [
+        [
+            "ba-government-administration",
+            "BA (Government and Administration)"
+        ],
+        [
+            "msc-public-policy",
+            "MSc Public Policy"
+        ]
     ],
-    "sustainable-development":[
-        ["ba-ss","BA ( Social Sciences)"],
-        ["msc-sustainable-inclusive-dev","MSc ( Sustainable and Inclusive Development)"],
-        ["msc-rural-dev","MSc ( Sustainable Rural Development)"]
+    "sustainable-development": [
+        [
+            "ba-ss",
+            "BA ( Social Sciences)"
+        ],
+        [
+            "msc-sustainable-inclusive-dev",
+            "MSc ( Sustainable and Inclusive Development)"
+        ],
+        [
+            "msc-rural-dev",
+            "MSc ( Sustainable Rural Development)"
+        ]
     ],
-    "disaster-mgmt":[
-        ["msc-disaster-mgmt","MSc ( Compassion, Peace , Humanitarian action and Disaster Risk Management)"]
+    "disaster-mgmt": [
+        [
+            "msc-disaster-mgmt",
+            "MSc ( Compassion, Peace , Humanitarian action and Disaster Risk Management)"
+        ]
     ],
-    "public-health":[
-        ["mph","MPH ( Master in Public Health )"]
+    "public-health": [
+        [
+            "mph",
+            "MPH ( Master in Public Health )"
+        ]
     ],
-    "agribusiness":[
-        ["msc-agri","MSc ( Agribusiness Entrepreneurship)"]
+    "agribusiness": [
+        [
+            "msc-agri",
+            "MSc ( Agribusiness Entrepreneurship)"
+        ]
     ],
-    "ecology-enviromental-mgmt":[
-        ["msc-ecology-env-mgmt","MSc ( Ecology , Society and Sustainable Development)"]
+    "ecology-enviromental-mgmt": [
+        [
+            "msc-ecology-env-mgmt",
+            "MSc ( Ecology , Society and Sustainable Development)"
+        ]
     ]
 }

@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Font Awesome -->
@@ -13,100 +13,70 @@
 
 <body>
     <!--https://www.coursera.org/programs/mit-wpu-0o0ug-->
-    <div class="container">
-        <div class="card mx-auto shadow" style="width: 27em;">
-            <div class="card-body">
-                <form class=" text-center" method="GET">
-                    <p>
-                    Name
-                    <div class="container">
+    <div class="container" style="font-size: medium;">
+        <div style="height:10vh;"></div>
+        <div class="row">
+            <div class="card col-md-5 mx-auto shadow" style="width:80%">
+                <form class="card-body " method="GET">
+                    <div class="container form-group">
+                        <label class="text-left font-weight-bold">
+                            Name
+                        </label>
                         <input class="form-control" type="text" name="name" />
                     </div>
-                </p>
-                <p>
-                    ERP Id
-                    <div class="container">
+                    <div class="container form-group">
+                        <label class="text-left font-weight-bold">
+                            ERP Id</label>
+
                         <input class="form-control" type="text" name="erpId" />
                     </div>
-                </p>
+                    <div class="container form-group">
+                        <label class="text-left font-weight-bold">
+                            Faculty
+                        </label>
 
-                <p>
-                    School
-                    <div class="container">
-                        <select id="school" class="form-control" onchange="setPrograms()" onload="setPrograms()" name="school">
-                            <optgroup label="Engineering and Technology">
-                            <option value="cet" selected>School of Computer Engineering and Technology</option>
-                            <option value="ece">School Electronics and Communication Engineering</option>
-                            <option value="ee">School of Electrical Engineering</option>
-                            <option value="mech">School of Mechanical Engineering</option>
-                            <option value="civil">School of Civil Engineering</option>
-                            <option value="chem">School of Chemical Engineering</option>
-                            <option value="polymer">School of Polymer Engineering</option>
-                            <option value="petroleum">School of Petroleum Engineering</option>
-                        </optgroup>
-                        <optgroup label="Design">
-                            <option value="design">School of Design</option>
-                        </optgroup>
-                        <optgroup label="Polytechnic">
-                            <option value="polytechnic">School of Polytechnic</option>
-                        </optgroup>
-                        <optgroup label="Economics"><
-                            <option value="economics">School of Economics</option>
-                        </optgroup>
-                            <optgroup label="Management">
-                            <option value="management-ug">School of Management(UG)</option>
-                            <option value="management-pg">School of Management(PG)</option>
-                        </optgroup>
-                        <optgroup label="Science">
-                            <option value="cs-science">School of Computer Science</option>
-                            <option value="maths-science">School of Mathematics and Statistics</option>
-                            <option value="physics-science">School of Physics</option>
-                            <option value="chem-science">School of Chemistry</option>
-                            <option value="bio-science">School of Biology</option>
-                        </optgroup>
-                            <optgroup label="Pharmacy">
-                                <option value="pharmacy">School of Pharmacy</option>
-                            </optgroup>
-                            <optgroup label="Commerce">
-                                <option value="commerce">School of Commerce</option>
-                            </optgroup>
-                            <optgroup label="Education">
-                                <option value="education">School of Education</option>
-                            </optgroup>
-                            <optgroup label="Liberal Arts">
-                                <option value="liberal-arts">School of Liberal Arts</option>
-                            </optgroup>
-                            <optgroup label="Fine Arts, Media & Journalism">
-                                <option value="fine-arts">School of Fine Arts</option>
-                                <option value="media">School of Media & Journalism</opton>
-                                <option value="photography">School of Photography</option>
-                            </optgroup>
-                            <optgroup label="Law">
-                                <option value="law">School of Law</option>
-                            </optgroup>
-                            <optgroup label="GOVERNANCE">
-                                <option value="government">School of Government</option>
-                                <option value="public-policy">School of Public Policy</option>
-                            </optgroup>
-                            <optgroup label="Sustainable Studies">
-                                <option value="sustainable-development">School of Sustainable Development</option>
-                                <option value="disaster-mgmt">School of Disaster Management</option>
-                                <option value="public-health">School of Public Health</option>
-                                <option value="agribusiness">School of Agribusiness Management</option>
-                                <option value="ecology-enviromental-mgmt">School of Ecology and Environmental Management</option>
-                            </optgroup>
+                        <select class="form-control" name="faculty" id="faculty" onchange="getSchools()">
+                            <option value="" selected disabled>Select Faculty</option>
+                            <option value="Engineering and Technology">Engineering and Technology</option>
+                            <option value="Design">Design</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Management">Management</option>
+                            <option value="Science">Science</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Education">Education</option>
+                            <option value="Liberal Arts">Liberal Arts</option>
+                            <option value="Fine Arts, Media & Journalism">Fine Arts, Media & Journalism</option>
+                            <option value="Law">Law</option>
+                            <option value="Government">Government</option>
+                            <option value="Sustainable Studies">Sustainable Studies</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="container form-group d-none field">
+                        <label class="text-left font-weight-bold">
+                            School</label>
+
+                        <select id="school" class="form-control" onchange="getPrograms()" name="school">
+
                             <!-- <option value="others">Others</option> -->
                         </select>
-                        
+
                     </div>
-                </p>
-                <p>
-                    Program
-                    <div class="container">
-                        <select class="form-control" id="program" name="program"></select>
+
+                    <div class="container d-none form-group field">
+                        <label class="text-left font-weight-bold">
+                            Program</label>
+                        <select class="form-control" id="program" name="program">
+                        </select>
                     </div>
-                </p>
-                <!-- <p>
+                    <div class="container d-none form-group field">
+                        <label class="font-weight-bold">Year</label>
+                        <input type="text" class="form-control" name="year">
+                    </div>
+                    <!-- <p>
                     Program
                     <div class="container">
                         <select class="form-control" name="program" id="program">
@@ -117,16 +87,21 @@
                         </select>
                     </div>
                 </p> -->
-                <p>
-                    <div class="container">
-                        <button type="submit">Submit</button>
+                        <div class="container text-center">
+                            <button class="btn btn-primary" type="submit">Submit</button>
 
-                    </div>
-                </p>
+                        </div>
+                    
                 </form>
             </div>
         </div>
     </div>
 </body>
-
+<!-- ,
+    "polytechnic": [
+        [,],
+        [,],
+        [,],
+        [,]
+    ] -->
 </html>
