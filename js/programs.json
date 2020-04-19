@@ -9,6 +9,10 @@
             "BTech. Computer Science and Business Systems"
         ],
         [
+            "btech-cse-integ",
+            "Integrated B.Tech in Computer Engineering"
+        ],
+        [
             "mtech-cse",
             "MTech. Computer Science and Engineering"
         ],
@@ -21,6 +25,10 @@
         [
             "btech-ece",
             "BTech. Electronics & Communication Engineering"
+        ],
+        [
+            "btech-ece-integ",
+            "Integrated B.Tech in Electronics & Telecommunication"
         ],
         [
             "mtech-ece",
@@ -41,6 +49,10 @@
             "BTech. Robotics and Automation Engineering"
         ],
         [
+            "btech-me-integ",
+            "Integrated B.Tech in Mechanical Engineering"
+        ],
+        [
             "mtech-me",
             "MTech. Mechanical Engineering"
         ],
@@ -54,6 +66,8 @@
             "btech-ce",
             "BTech. Civil Engineering"
         ],
+        ["btech-ce-integ",
+        "Integrated B.Tech in Civil Engineering"],
         [
             "mtech-ce",
             "MTech. Civil Engineering"
@@ -102,6 +116,12 @@
             "phd-petro",
             "Ph.d Petroleum Engineering"
         ]
+    ],
+    "polytechnic": [
+        ["btech-ce-integ","Integrated B.Tech in Civil Engineering"],
+        ["btech-cse-integ","Integrated B.Tech in Computer Engineering"],
+        ["btech-me-integ","Integrated B.Tech in Mechanical Engineering"],
+        ["btech-ece-integ","Integrated B.Tech in Electronics & Telecommunication"]
     ],
     "design": [
         [
