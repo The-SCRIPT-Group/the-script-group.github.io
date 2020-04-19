@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/Coursera.js"></script>
+</head>
+
+<body>
+    <!--https://www.coursera.org/programs/mit-wpu-0o0ug-->
+    <div class="container">
+        <div class="card mx-auto shadow" style="width: 27em;">
+            <div class="card-body">
+                <form class=" text-center" method="GET">
+                    <p>
+                    Name
+                    <div class="container">
+                        <input class="form-control" type="text" name="name" />
+                    </div>
+                </p>
+                <p>
+                    ERP Id
+                    <div class="container">
+                        <input class="form-control" type="text" name="erpId" />
+                    </div>
+                </p>
+
+                <p>
+                    School
+                    <div class="container">
+                        <select id="school" class="form-control" onchange="setPrograms()" onload="setPrograms()" name="school">
+                            <optgroup label="Engineering and Technology">
+                            <option value="cet" selected>School of Computer Engineering and Technology</option>
+                            <option value="ece">School Electronics and Communication Engineering</option>
+                            <option value="ee">School of Electrical Engineering</option>
+                            <option value="mech">School of Mechanical Engineering</option>
+                            <option value="civil">School of Civil Engineering</option>
+                            <option value="chem">School of Chemical Engineering</option>
+                            <option value="polymer">School of Polymer Engineering</option>
+                            <option value="petroleum">School of Petroleum Engineering</option>
+                        </optgroup>
+                        <optgroup label="Design">
+                            <option value="design">School of Design</option>
+                        </optgroup>
+                        <optgroup label="Polytechnic">
+                            <option value="polytechnic">School of Polytechnic</option>
+                        </optgroup>
+                        <optgroup label="Economics"><
+                            <option value="economics">School of Economics</option>
+                        </optgroup>
+                            <optgroup label="Management">
+                            <option value="management-ug">School of Management(UG)</option>
+                            <option value="management-pg">School of Management(PG)</option>
+                        </optgroup>
+                        <optgroup label="Science">
+                            <option value="cs-science">School of Computer Science</option>
+                            <option value="maths-science">School of Mathematics and Statistics</option>
+                            <option value="physics-science">School of Physics</option>
+                            <option value="chem-science">School of Chemistry</option>
+                            <option value="bio-science">School of Biology</option>
+                        </optgroup>
+                            <optgroup label="Pharmacy">
+                                <option value="pharmacy">School of Pharmacy</option>
+                            </optgroup>
+                            <optgroup label="Commerce">
+                                <option value="commerce">School of Commerce</option>
+                            </optgroup>
+                            <optgroup label="Education">
+                                <option value="education">School of Education</option>
+                            </optgroup>
+                            <optgroup label="Liberal Arts">
+                                <option value="liberal-arts">School of Liberal Arts</option>
+                            </optgroup>
+                            <optgroup label="Fine Arts, Media & Journalism">
+                                <option value="fine-arts">School of Fine Arts</option>
+                                <option value="media">School of Media & Journalism</opton>
+                                <option value="photography">School of Photography</option>
+                            </optgroup>
+                            <optgroup label="Law">
+                                <option value="law">School of Law</option>
+                            </optgroup>
+                            <optgroup label="GOVERNANCE">
+                                <option value="government">School of Government</option>
+                                <option value="public-policy">School of Public Policy</option>
+                            </optgroup>
+                            <optgroup label="Sustainable Studies">
+                                <option value="sustainable-development">School of Sustainable Development</option>
+                                <option value="disaster-mgmt">School of Disaster Management</option>
+                                <option value="public-health">School of Public Health</option>
+                                <option value="agribusiness">School of Agribusiness Management</option>
+                                <option value="ecology-enviromental-mgmt">School of Ecology and Environmental Management</option>
+                            </optgroup>
+                            <!-- <option value="others">Others</option> -->
+                        </select>
+                        
+                    </div>
+                </p>
+                <p>
+                    Program
+                    <div class="container">
+                        <select class="form-control" id="program" name="program"></select>
+                    </div>
+                </p>
+                <!-- <p>
+                    Program
+                    <div class="container">
+                        <select class="form-control" name="program" id="program">
+                            <option val="btech-cse" selected>BTech. Computer Science and Engineering</option>
+                            <option val="btech-csbs">BTech. Computer Science and Business Systems</option>
+                            <option val="mtech-cse">MTech. Computer Science and Engineering</option>
+                            <option val="phd-cse">Ph.d Computer Science and Engineering</option>
+                        </select>
+                    </div>
+                </p> -->
+                <p>
+                    <div class="container">
+                        <button type="submit">Submit</button>
+
+                    </div>
+                </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
