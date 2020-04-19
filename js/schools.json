@@ -9,6 +9,9 @@
         ["polymer","School of Polymer Engineering"],
         ["petroleum","School of Petroleum Engineering"]
     ],
+    "Polytechnic": [
+        ["polytechnic","School of Polytechnic"]
+    ],
     "Design": [
         ["design","School of Design"]
     ],
