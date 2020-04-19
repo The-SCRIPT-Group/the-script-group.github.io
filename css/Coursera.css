@@ -7,8 +7,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 20%
+    min-height: 100vh;
+}
+
+body:first-child {
+    padding: 20%;
 }
 
 .container {
