@@ -42,7 +42,7 @@ function getSchools() {
 
     getPrograms();
 
-    $('.field').css("display", "block");
+    $('.field').slideDown();
 
 
 }

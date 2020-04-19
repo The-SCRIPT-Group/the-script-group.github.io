@@ -43,13 +43,6 @@ body:first-child {
     padding-right: 5px;
 }
 
-/*-- materialize css for toast --*/
-
-.toast {
-    -webkit-box-shadow: 0 2px 2px 0 rgba(82, 37, 153, 0.14), 0 3px 1px -2px rgba(82, 37, 153, 0.14), 0 1px 5px 0 rgba(82, 37, 153, 0.14);
-    box-shadow: 0 2px 2px 0 rgba(82, 37, 153, 0.14), 0 3px 1px -2px rgba(82, 37, 153, 0.14), 0 1px 5px 0 rgba(82, 37, 153, 0.14)
-}
-
 #toast-container {
     display: block;
     position: fixed;
@@ -57,29 +50,6 @@ body:first-child {
     top: 0.1% !important;
     right: 50% !important;
     transform: translateX(50%) translateY(50%) !important;
-}
-
-@media only screen and (max-width: 600px) {
-    #toast-container {
-        min-width: 100%;
-        bottom: 0
-    }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-    #toast-container {
-        left: 5%;
-        bottom: 7%;
-        max-width: 90%
-    }
-}
-
-@media only screen and (min-width: 993px) {
-    #toast-container {
-        top: 10%;
-        right: 7%;
-        max-width: 86%
-    }
 }
 
 .toast {
@@ -113,20 +83,3 @@ body:first-child {
     cursor: default;
     text-align: center;
 }
-
-.toast .toast-action {
-    color: #eeff41;
-    font-weight: 500;
-    margin-right: -25px;
-    margin-left: 3rem
-}
-
-@media only screen and (max-width: 600px) {
-    .toast {
-        width: 100%;
-        border-radius: 0
-    }
-}
-
-
-/*-- /materialize css for toast --*/
