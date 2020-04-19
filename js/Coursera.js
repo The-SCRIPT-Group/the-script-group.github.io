@@ -19,7 +19,9 @@ $(document).ready(() => {
     });
 
     $("#reg-form").on('submit', (e) => {
-        validate();
+        if (!validate()){
+            e.preventDefault();
+        }
     })
 
     $('select').formSelect();
@@ -58,12 +60,13 @@ function getPrograms() {
     })
 }
 
-function validate(e) {
-    console.log($("#school").val());
+function validate() {
+    var res = true;
+
     if ($("#faculty").val() == "") {
-        e.preventDefault();
-        alert("Please select Faculty");
-        return false;
+        M.toast({html: "Please select Faculty"});
+        res = false;
     }
-    return false;
+
+    return res;
 }
