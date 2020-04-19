@@ -1,106 +1,117 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Coursera</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="js/Coursera.js"></script>
+
+    <link rel="stylesheet" href="css/Coursera.css">
 </head>
 
 <body>
-    <!--https://www.coursera.org/programs/mit-wpu-0o0ug-->
-    <div class="container" style="font-size: medium;">
-        <div style="height:10vh;"></div>
-        <div class="row">
-            <div class="card col-md-5 mx-auto shadow" style="width:80%">
-                <form class="card-body " method="GET">
-                    <div class="container form-group">
-                        <label class="text-left font-weight-bold">
-                            Name
-                        </label>
-                        <input class="form-control" type="text" name="name" />
+    <div class="card container">
+        <div class="card-content row">
+            <form class="col s12" id="reg-form">
+                <div class="row">
+                    <div class="input-field">
+                        <input id="name" name="name" type="text" class="white-text" required>
+                        <label for="name">Name</label>
                     </div>
-                    <div class="container form-group">
-                        <label class="text-left font-weight-bold">
-                            ERP Id</label>
+                </div>
 
-                        <input class="form-control" type="text" name="erpId" />
+                <div class="row">
+                    <div class="input-field">
+                        <input id="erpId" name="erpId" type="text" class="white-text" required>
+                        <label for="erpId">ERP ID</label>
                     </div>
-                    <div class="container form-group">
-                        <label class="text-left font-weight-bold">
-                            Email
-                        </label>
-                        <input class="form-control" type="email" name="email" />
+                </div>
+
+                <div class="row">
+                    <div class="input-field">
+                        <input id="email" name="email" type="email" class="white-text" required>
+                        <label for="email">Email</label>
                     </div>
-                    <div class="container form-group">
-                        <label class="text-left font-weight-bold">
-                            Phone Number
-                        </label>
-                        <input class="form-control" type="text" name="email" />
+                </div>
+
+                <div class="row">
+                    <div class="input-field">
+                        <input id="phno" name="phno" type="text" class="white-text" required>
+                        <label for="phno">Phone Number</label>
                     </div>
-                    <div class="container form-group">
-                        <label class="text-left font-weight-bold">
+                </div>
+
+                <div id="facultyField" class="row">
+                    <div class="input-field">
+                        <select name="faculty" id="faculty">
+                            <option selected></option>
+                        </select>
+                        <label for="faculty">
                             Faculty
                         </label>
-
-                        <select class="form-control" name="faculty" id="faculty" onchange="getSchools()">
-                            <option value="" selected disabled>Select Faculty</option>                         
-                        </select>
-
-
                     </div>
+                </div>
 
-                    <div class="container form-group d-none field">
-                        <label class="text-left font-weight-bold">
-                            School</label>
-
-                        <select id="school" class="form-control" onchange="getPrograms()" name="school">
-
-                            <!-- <option value="others">Others</option> -->
+                <div class="row field" style="display: none;">
+                    <div class="input-field">
+                        <select name="school" id="school">
                         </select>
-
+                        <label for="school">
+                            School
+                        </label>
                     </div>
+                </div>
 
-                    <div class="container d-none form-group field">
-                        <label class="text-left font-weight-bold">
-                            Program</label>
-                        <select class="form-control" id="program" name="program">
+                <div class="row field" style="display: none;">
+                    <div class="input-field">
+                        <select name="program" id="program">
                         </select>
+                        <label for="program">
+                            Program
+                        </label>
                     </div>
-                    <div class="container d-none form-group field">
-                        <div class="row">
-                        <div class="col-6">
-                        <label class="font-weight-bold">Year</label>
-                        <select name="year" class="form-control">
+                </div>
+
+                <div class="row field" style="display: none; padding-left: 0%!important; padding-right: 0%!important;">
+                    <div class="col s6 input-field">
+                        <select name="year" id="year">
                             <option value="1">1st</option>
                             <option value="2">2nd</option>
                             <option value="3">3rd</option>
                             <option value="4">4th</option>
                             <option value="5">5th</option>
                             <option value="6">6th</option>
-
                         </select>
+                        <label for="year">
+                            Year
+                        </label>
                     </div>
-                    <div class="col-6">
-                        <label class="font-weight-bold">Panel / Div</label>
-                        <input type="text" class="form-control" name="panel">
+                    <div class="col s6 input-field">
+                        <input id="panel" name="panel" type="text" class="white-text" required>
+                        <label for="panel">Panel</label>
                     </div>
                 </div>
-                    </div>
-                    <div class="container text-center">
-                        <button class="btn btn-primary" type="submit">Submit</button>
-                    </div>
 
-                </form>
-            </div>
+                <div class="input-field"
+                    style="margin-left: auto; margin-right: auto; width: fit-content; width: -moz-fit-content;">
+                    <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action"
+                        style="margin-left: auto; margin-right: auto">
+                        Submit
+                    </button>
+                </div>
+            </form>
         </div>
-        <div style="height:10vh;"></div>
     </div>
 </body>
-
 
 </html>
