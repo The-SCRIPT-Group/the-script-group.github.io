@@ -66,8 +66,10 @@
             "btech-ce",
             "BTech. Civil Engineering"
         ],
-        ["btech-ce-integ",
-        "Integrated B.Tech in Civil Engineering"],
+        [
+            "btech-ce-integ",
+            "Integrated B.Tech in Civil Engineering"
+        ],
         [
             "mtech-ce",
             "MTech. Civil Engineering"
@@ -118,10 +120,22 @@
         ]
     ],
     "polytechnic": [
-        ["btech-ce-integ","Integrated B.Tech in Civil Engineering"],
-        ["btech-cse-integ","Integrated B.Tech in Computer Engineering"],
-        ["btech-me-integ","Integrated B.Tech in Mechanical Engineering"],
-        ["btech-ece-integ","Integrated B.Tech in Electronics & Telecommunication"]
+        [
+            "btech-ce-integ",
+            "Integrated B.Tech in Civil Engineering"
+        ],
+        [
+            "btech-cse-integ",
+            "Integrated B.Tech in Computer Engineering"
+        ],
+        [
+            "btech-me-integ",
+            "Integrated B.Tech in Mechanical Engineering"
+        ],
+        [
+            "btech-ece-integ",
+            "Integrated B.Tech in Electronics & Telecommunication"
+        ]
     ],
     "design": [
         [
