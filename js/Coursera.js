@@ -1,5 +1,3 @@
-facultySelect = true;
-
 $(document).ready(() => {
     $('select').on('contentChanged', function () {
         $(this).formSelect();
@@ -15,11 +13,12 @@ $(document).ready(() => {
         data.forEach(element => {
             $("#faculty").append(`<option value='${element}'>${element}</option>`);
         });
+
         $('#faculty').trigger('contentChanged');
     });
 
     $("#reg-form").on('submit', (e) => {
-        if (!validate()){
+        if (!validate()) {
             e.preventDefault();
         }
     })
@@ -64,7 +63,7 @@ function validate() {
     var res = true;
 
     if ($("#faculty").val() == "") {
-        M.toast({html: "Please select Faculty"});
+        M.toast({ html: "Please select Faculty" });
         res = false;
     }
 
