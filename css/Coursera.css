@@ -17,7 +17,8 @@ body:first-child {
 .container {
     background: rgba(25, 28, 29, 0.9);
     padding: 20px 25px;
-    width: 550px;
+    width: 70vw;
+    max-width: 550px;
     height: auto;
     box-sizing: border-box;
     position: relative;
