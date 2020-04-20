@@ -37,6 +37,7 @@
     <div class="card container">
         <div class="card-content row">
             <form class="col s12" id="reg-form">
+                <img class="clogo" src="images/courlogo.png" style="width: inherit;"></img>
                 <div class="row">
                     <div class="input-field">
                         <input id="name" name="name" type="text" class="white-text" required>
@@ -46,26 +47,26 @@
 
                 <div class="row">
                     <div class="input-field">
-                        <input id="erpId" name="erpId" type="text" class="white-text" required>
+                        <input id="erpId" name="prn" type="text" class="white-text" required>
                         <label for="erpId">ERP ID</label>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row f2" style="display: none;">
                     <div class="input-field">
                         <input id="email" name="email" type="email" class="white-text" required>
                         <label for="email">Email</label>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row f2" style="display: none;">
                     <div class="input-field">
                         <input id="phno" name="phno" type="text" class="white-text" required>
                         <label for="phno">Phone Number</label>
                     </div>
                 </div>
 
-                <div id="facultyField" class="row">
+                <div id="facultyField" style="display: none;" class="row f2">
                     <div class="input-field">
                         <select name="faculty" id="faculty">
                             <option selected></option>

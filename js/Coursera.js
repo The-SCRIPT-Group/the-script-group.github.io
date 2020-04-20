@@ -8,7 +8,11 @@ $(document).ready(() => {
     $("#faculty").on('change', () => {
         getSchools();
     })
-
+    $("#name,#erpId").on('focus', () => {
+        $(".clogo").slideUp();
+        $(".f2").slideDown();
+        
+    });
     $.getJSON("js/faculties.json", data => {
         data.forEach(element => {
             $("#faculty").append(`<option value='${element}'>${element}</option>`);
