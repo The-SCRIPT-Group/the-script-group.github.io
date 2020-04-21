@@ -13,7 +13,7 @@ $(document).ready(() => {
         getPrograms();
     })
 
-    $("#name,#erpId").on('focus', () => {
+    $("#name,#prn").on('focus', () => {
         $(".clogo").slideUp();
         $(".f2").slideDown();
         
