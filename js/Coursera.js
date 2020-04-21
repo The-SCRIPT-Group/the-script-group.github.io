@@ -78,12 +78,12 @@ function validate() {
     let phone=$("#phno").val();
 
     if (phone.length != 10 || phone.match(/^\d+$/)==null) {
-        M.toast({html:"Please enter correct phone number"});
+        M.toast({html:"Please enter the correct phone number"});
         res=false;
     }
-    let erpno= $("#erpId").val()
-    if (erpno.length != 11 || erpno.match(/^[S,s]\d+$/)==null) {
-        M.toast({html:"Please enter correct ERP Id"});
+    let prn= $("#prn").val()
+    if (prn.length != 10 || prn.match(/^\d+$/)==null) {
+        M.toast({html:"Please enter the correct PRN"});
         res=false;
     }
 
