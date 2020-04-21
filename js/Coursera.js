@@ -75,6 +75,17 @@ function validate() {
         M.toast({ html: "Please select Faculty" });
         res = false;
     }
+    let phone=$("#phno").val();
+
+    if (phone.length != 10 || phone.match(/^\d+$/)==null) {
+        M.toast({html:"Please enter correct phone number"});
+        res=false;
+    }
+    let erpno= $("#erpId").val()
+    if (erpno.length != 11 || erpno.match(/^[S,s]\d+$/)==null) {
+        M.toast({html:"Please enter correct ERP Id"});
+        res=false;
+    }
 
     return res;
 }
