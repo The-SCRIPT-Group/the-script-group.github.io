@@ -8,6 +8,11 @@ $(document).ready(() => {
     $("#faculty").on('change', () => {
         getSchools();
     })
+
+    $("#school").on('change', () => {
+        getPrograms();
+    })
+
     $("#name,#erpId").on('focus', () => {
         $(".clogo").slideUp();
         $(".f2").slideDown();
@@ -55,8 +60,6 @@ function getPrograms() {
     $.getJSON("js/programs.json", data => {
         let school = $("#school").val();
         $("#program").html("");
-        console.log(data);
-        console.log(school);
         data[school].forEach(element => {
             $("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
         });
