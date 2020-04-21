@@ -71,16 +71,22 @@ function getPrograms() {
 function validate() {
     var res = true;
 
+    if ($("#name").val().split(" ").length <= 1) {
+        M.toast({ html: "Please enter full name" });
+        res = false;
+    }
+
     if ($("#faculty").val() == "") {
         M.toast({ html: "Please select Faculty" });
         res = false;
     }
+    
     let phone=$("#phno").val();
-
     if (phone.length != 10 || phone.match(/^\d+$/)==null) {
         M.toast({html:"Please enter the correct phone number"});
         res=false;
     }
+    
     let prn= $("#prn").val()
     if (prn.length != 10 || prn.match(/^\d+$/)==null) {
         M.toast({html:"Please enter the correct PRN"});
