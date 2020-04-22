@@ -35,6 +35,37 @@ $(document).ready(() => {
     $('select').formSelect();
     $('.select-dropdown').addClass('white-text');
     $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
+
+
+$("#reg-form").submit( e => {
+    e.preventDefault();
+    let validflag=true;
+    validflag=validate();
+
+    let emailContent=`PratikIsGay`;
+    
+
+    if (validflag) {
+        data= {
+            'name':$("#name").val(),
+            'email':$("#email").val(),
+            'phone':$("#phno").val(),
+            'prn':$("#prn").val(),
+            'faculty':$("#faculty").val(),
+            'school':$("#school").val(),
+            'program':$("#program").val(),
+            'year':$("#year").val(),
+            'emailContent':emailContent
+        }
+        $.post("https://hades.thescriptgroup.in/submit",
+            data,
+            (data,status) => {
+                console.log(data);
+                $("#reg-form").reset();
+            }
+        )
+    }
+})
 });
 
 function getSchools() {
@@ -95,33 +126,3 @@ function validate() {
 
     return res;
 }
-
-$("#reg-form").submit( e => {
-    e.preventDefault();
-    let validflag=true;
-    validflag=validate();
-
-    let emailContent=`PratikIsGay`;
-    
-
-    if (validflag) {
-        data= {
-            'name':$("#name").val(),
-            'email':$("#email").val(),
-            'phone':$("#phno").val(),
-            'prn':$("#prn").val(),
-            'faculty':$("#faculty").val(),
-            'school':$("#school").val(),
-            'program':$("#program").val(),
-            'year':$("#year").val(),
-            'emailContent':emailContent
-        }
-        $.post("https://hades.thescriptgroup.in/submit",
-            data,
-            (data,status) => {
-                console.log(data);
-                $("#reg-form").reset();
-            }
-        )
-    }
-})
