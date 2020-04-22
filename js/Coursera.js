@@ -26,18 +26,14 @@ $(document).ready(() => {
         $('#faculty').trigger('contentChanged');
     });
 
-    $("#reg-form").on('submit', (e) => {
-        if (!validate()) {
-            e.preventDefault();
-        }
-    })
+
 
     $('select').formSelect();
     $('.select-dropdown').addClass('white-text');
     $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
 
 
-$("#reg-form").submit( e => {
+$("#reg-form").on('submit',e => {
     e.preventDefault();
     let validflag=true;
     validflag=validate();
