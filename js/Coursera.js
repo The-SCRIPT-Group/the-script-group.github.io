@@ -125,7 +125,7 @@ function validate() {
     
     let prn= $("#prn").val()
     if (prn.length != 10 || prn.match(/^\d{10}$/)==null) {
-        M.toast({html:"Please enter the correct PRN"});
+        M.toast({html:"Please enter the correct PRN! Remember, your PRN consists only of numbers."});
         res=false;
     }
 
