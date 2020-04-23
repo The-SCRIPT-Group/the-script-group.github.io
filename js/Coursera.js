@@ -238,7 +238,7 @@ $(document).ready(() => {
         'school': $("#school").val(),
         'program': $("#program").val(),
         'year': $("#year").val(),
-        'email_content': emailContent,
+        'email_content': email_content,
         'email_formattable_content': email_formattable_content,
         'email_fields': 'name,email',
         'no_qr': '',
