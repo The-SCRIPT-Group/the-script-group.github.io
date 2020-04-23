@@ -240,7 +240,7 @@ $(document).ready(() => {
         'year': $("#year").val(),
         'email_content': email_content,
         'email_formattable_content': email_formattable_content,
-        'email_fields': 'name,email',
+        'email_content_fields': 'name,email',
         'no_qr': '',
       }
 
