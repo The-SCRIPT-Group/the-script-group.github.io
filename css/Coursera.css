@@ -1,6 +1,6 @@
 body {
     background: #191c1d;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.it/1600/00/?random');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.static-collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -128,4 +128,15 @@ body:first-child {
   display: none;
   align-items: center;
   justify-content: center;
+}
+
+#mailus {
+    font-size: 1vw;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    #mailus {
+        font-size: 3.5vw;
+    }
 }
