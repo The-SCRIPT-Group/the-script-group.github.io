@@ -159,7 +159,7 @@ $(document).ready(() => {
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <tr>
                       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" align="center"><img src="https://raw.githubusercontent.com/The-SCRIPT-Group/Media-Kit/master/CourseraProgram/courser.png" height=60>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" align="center"><img src="https://media.thescriptgroup.in/CourseraProgram/courser.png" height=60>
                         </p>
                         <br/><br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}</p>
