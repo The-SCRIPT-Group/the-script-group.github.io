@@ -51,8 +51,12 @@ $("#reg-form").on('submit',e => {
             'school':$("#school").val(),
             'program':$("#program").val(),
             'year':$("#year").val(),
-            'emailContent':emailContent
+            'email_content':emailContent,
+            'email_content_fields':"Pratik",
+            'email_formattable_content':'is gay'
         }
+
+        console.log(data)
         $.post("https://hades.thescriptgroup.in/submit",
             data,
             (data,status) => {
