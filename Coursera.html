@@ -36,6 +36,19 @@
 <body>
     <div class="card container">
         <div class="card-content row">
+            <div class="main-loader">
+            <div class="preloader-wrapper active">
+                <div class="spinner-layer ">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <form class="col s12" id="reg-form">
                 <img class="clogo" src="images/courlogo.png" style="width: inherit;"></img>
                 <div class="row">
@@ -119,7 +132,7 @@
                 <div class="input-field"
                     style="margin-left: auto; margin-right: auto; width: fit-content; width: -moz-fit-content;">
                     <button class="btn btn-register waves-effect waves-light" type="submit" name="action"
-                        style="margin-left: auto; margin-right: auto">
+                        style="margin-left: auto; margin-right: auto" id="submit">
                         Submit
                     </button>
                 </div>
@@ -134,6 +147,11 @@
                     </p>
                 </div>
             </form>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
         </div>
     </div>
 </body>

@@ -4,7 +4,8 @@ $(document).ready(() => {
         $('.select-dropdown').addClass('white-text');
         $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
     });
-
+    $('#modal').modal();
+    
     $("#reg-form").on("reset", () =>{
         $(".clogo").slideDown();
         $(".field").slideUp();
@@ -60,12 +61,16 @@ $("#reg-form").on('submit',e => {
             'year':$("#year").val(),
             'email_content':emailContent,            
         }
-
-        console.log(data)
+        
+        $(".main-loader").css("display","flex")
         $.post("https://hades.thescriptgroup.in/submit",
             data,
             (data,status) => {
-                console.log(data);
+                $(".main-loader").css("display","none")
+                var instance = M.Modal.getInstance($("#modal"));
+                $(".modal-content").html(data);
+        
+                instance.open();
                 $("#reg-form").trigger("reset");
             }
         )
