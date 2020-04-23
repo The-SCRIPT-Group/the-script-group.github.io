@@ -5,8 +5,15 @@ $(document).ready(() => {
         $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
     });
 
+    $("#reg-form").on("reset", () =>{
+        $(".clogo").slideDown();
+        $(".field").slideUp();
+        $(".f2").slideUp();
+    })
+
     $("#faculty").on('change', () => {
-        getSchools();
+        if ($("#faculty").val()!=="")
+            getSchools();
     })
 
     $("#school").on('change', () => {
@@ -51,9 +58,7 @@ $("#reg-form").on('submit',e => {
             'school':$("#school").val(),
             'program':$("#program").val(),
             'year':$("#year").val(),
-            'email_content':emailContent,
-            'email_content_fields':"Pratik",
-            'email_formattable_content':'is gay'
+            'email_content':emailContent,            
         }
 
         console.log(data)
@@ -61,7 +66,7 @@ $("#reg-form").on('submit',e => {
             data,
             (data,status) => {
                 console.log(data);
-                $("#reg-form").reset();
+                $("#reg-form").trigger("reset");
             }
         )
     }
@@ -119,7 +124,7 @@ function validate() {
     }
     
     let prn= $("#prn").val()
-    if (prn.length != 10 || prn.match(/^\d+$/)==null) {
+    if (prn.length != 10 || prn.match(/^\d{10}$/)==null) {
         M.toast({html:"Please enter the correct PRN"});
         res=false;
     }
