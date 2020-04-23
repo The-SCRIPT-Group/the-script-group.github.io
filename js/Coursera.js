@@ -59,7 +59,8 @@ $("#reg-form").on('submit',e => {
             'school':$("#school").val(),
             'program':$("#program").val(),
             'year':$("#year").val(),
-            'email_content':emailContent,            
+            'email_content':emailContent,
+            'no_qr': '',       
         }
         
         $(".main-loader").css("display","flex")
