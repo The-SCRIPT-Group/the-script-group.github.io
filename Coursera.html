@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coursera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="js/Coursera.js"></script>
+
+    <link rel="stylesheet" href="css/Coursera.css">
+</head>
+
+<style>
+    #mailus {
+        font-size: 1vw;
+        color: white;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #mailus {
+            font-size: 3.5vw;
+        }
+    }
+</style>
+
+<body>
+    <div class="card container">
+        <div class="card-content row">
+            <div class="main-loader">
+                <div class="preloader-wrapper active">
+                    <div class="spinner-layer ">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="col s12" id="reg-form">
+                <img class="clogo" src="images/courlogo.png" style="width: inherit;"></img>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="name" name="name" type="text" class="white-text" required>
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field">
+                        <input id="prn" name="prn" type="text" class="white-text" required>
+                        <label for="prn">PRN</label>
+                    </div>
+                </div>
+
+                <div class="row f2" style="display: none;">
+                    <div class="input-field">
+                        <input id="email" name="email" type="email" class="white-text" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="row f2" style="display: none;">
+                    <div class="input-field">
+                        <input id="phno" name="phno" type="text" class="white-text" required>
+                        <label for="phno">Phone Number</label>
+                    </div>
+                </div>
+
+                <div id="facultyField" style="display: none;" class="row f2">
+                    <div class="input-field">
+                        <select name="faculty" id="faculty">
+                            <option selected></option>
+                        </select>
+                        <label for="faculty">
+                            Faculty
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field" style="display: none;">
+
+                    <div class="row field">
+                        <div class="input-field">
+                            <select name="school" id="school">
+                            </select>
+                            <label for="school">
+                                School
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row field">
+                        <div class="input-field">
+                            <select name="program" id="program">
+                            </select>
+                            <label for="program">
+                                Program
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row field" style="padding-left: 0%!important; padding-right: 0%!important;">
+                        <div class="s6 input-field">
+                            <select name="year" id="year">
+                                <option value="1">1st</option>
+                                <option value="2">2nd</option>
+                                <option value="3">3rd</option>
+                                <option value="4">4th</option>
+                                <option value="5">5th</option>
+                                <option value="6">6th</option>
+                            </select>
+                            <label for="year">
+                                Year
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-field"
+                    style="margin-left: auto; margin-right: auto; width: fit-content; width: -moz-fit-content;">
+                    <button class="btn btn-register waves-effect waves-light" type="submit" name="action"
+                        style="margin-left: auto; margin-right: auto" id="submit">
+                        Submit
+                    </button>
+                </div>
+                <div class="center-align">
+                    <img class="logo" src="images/LogoTransp2.png"></img>
+                </div>
+                <div class="row">
+
+                    <p class="center-align" id="mailus">
+                        For any queries, contact us
+                        <a href="mailto:support@thescriptgroup.in" target="_top">here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        </div>
+    </div>
+</body>
+
+</html>
