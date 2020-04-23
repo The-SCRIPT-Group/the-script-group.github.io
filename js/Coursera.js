@@ -163,9 +163,9 @@ $(document).ready(() => {
                         </p>
                         <br/><br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group. Use the button below to enable your subscription.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group.</p>
                         <br/>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your subscription will be enabled for<b> {email}</b>.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your subscription will be enabled for<b> {email}</b>. You will receive an email regarding this soon.</p>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; Margin-bottom: 15px;">DETAILS:</p>
                         
                         <ul>
@@ -185,7 +185,7 @@ $(document).ready(() => {
                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://www.coursera.org/programs/mit-wpu-0o0ug/" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">sign up</a> </td>
+                                      
                                     </tr>
                                   </tbody>
                                 </table>
