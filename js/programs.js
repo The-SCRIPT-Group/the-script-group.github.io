@@ -1,4 +1,4 @@
-{
+var programsData = {
     "cet": [
         [
             "btech-cse",

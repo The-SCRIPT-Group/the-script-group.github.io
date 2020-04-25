@@ -27,13 +27,11 @@ $(document).ready(() => {
 
 	});
 
-	$.getJSON("js/faculties.json", data => {
-		data.forEach(element => {
+		facultiesData.forEach(element => {
 			$("#faculty").append(`<option value='${element}'>${element}</option>`);
 		});
 
 		$('#faculty').trigger('contentChanged');
-	});
 
 	$('select').formSelect();
 	$('.select-dropdown').addClass('white-text');
@@ -261,28 +259,13 @@ $(document).ready(() => {
 });
 
 function getSchools() {
-	fetch('js/schools.json')
-		.then(response => response.json())
-		.then(data => {
 			let faculty = $("#faculty").val();
 			$("#school").html("");
-			data[faculty].forEach((element, index) => {
+			schoolsData[faculty].forEach((element, index) => {
 				$("#school").append(`<option value="${element[0]}"  >${element[1]}</option>`);
 			});
 
 			$('#school').trigger('contentChanged');
-		});
-
-
-	// $.getJSON("js/schools.json", data => {
-	//   let faculty = $("#faculty").val();
-	//   $("#school").html("");
-	//   data[faculty].forEach((element, index) => {
-	//     $("#school").append(`<option value="${element[0]}"  >${element[1]}</option>`);
-	//   });
-
-	//   $('#school').trigger('contentChanged');
-	// });
 
 	getPrograms();
 
@@ -292,17 +275,11 @@ function getSchools() {
 
 function getPrograms() {
 
-	fetch('js/programs.json')
-		.then(response => response.json())
-		.then(data => {
 			let school = $("#school").val();
 			$("#program").html("");
-			data[school].forEach(element => {
+			programsData[school].forEach(element => {
 				$("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
 			});
-
-			$('#program').trigger('contentChanged');
-		});
 	// $.getJSON("js/programs.json", data => {
 	// 	let school = $("#school").val();
 	// 	$("#program").html("");

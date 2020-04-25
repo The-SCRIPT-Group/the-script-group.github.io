@@ -1,4 +1,4 @@
-[
+var facultiesData = [
     "Engineering and Technology",
     "Polytechnic",
     "Design",
