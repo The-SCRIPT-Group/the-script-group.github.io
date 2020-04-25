@@ -1,6 +1,6 @@
 body {
     background: #191c1d;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.static-collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/wpubg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
