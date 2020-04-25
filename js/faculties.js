@@ -1,4 +1,4 @@
-var facultiesData = [
+let facultiesData = [
     "Engineering and Technology",
     "Polytechnic",
     "Design",

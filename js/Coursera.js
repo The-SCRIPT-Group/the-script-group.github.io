@@ -287,7 +287,7 @@ function getPrograms() {
 	// 		$("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
 	// 	});
 
-	// 	$('#program').trigger('contentChanged');
+	 	$('#program').trigger('contentChanged');
 	// })
 }
 

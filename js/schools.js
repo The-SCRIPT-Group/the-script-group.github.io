@@ -1,4 +1,4 @@
-var schoolsData = {
+let schoolsData = {
     "Engineering and Technology": [
         ["cet","School of Computer Engineering & Technology"],
         ["ece","School of Electronics & Communication Engineering"],

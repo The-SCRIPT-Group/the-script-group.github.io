@@ -1,4 +1,4 @@
-var programsData = {
+let programsData = {
     "cet": [
         [
             "btech-cse",
