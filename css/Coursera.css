@@ -1,14 +1,20 @@
 body {
     background: #191c1d;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/wpubg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.static-collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: 200%;
+    background-position: top center;
     /* background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-size: 600%;
+    }
 }
 
 input:-webkit-autofill,
