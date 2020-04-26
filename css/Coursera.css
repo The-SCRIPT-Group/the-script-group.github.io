@@ -11,12 +11,16 @@ body {
     min-height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:768px), (orientation:portrait ) {
     body {
         background-size: 600%;
     }
 }
-
+@media screen and (min-width:769px) and (orientation:landscape) {
+    body {
+        background-size: 250%;
+    }
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
