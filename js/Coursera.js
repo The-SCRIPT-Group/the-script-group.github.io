@@ -161,7 +161,7 @@ $(document).ready(() => {
                         </p>
                         <br/><br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group.Your response has been recorded and you will soon receive an email for registration.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group. Your response has been recorded and you will soon receive an email for registration.</p>
                         <br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your subscription will be enabled for<b> {email}</b>.</p>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; Margin-bottom: 15px;">DETAILS:</p>
