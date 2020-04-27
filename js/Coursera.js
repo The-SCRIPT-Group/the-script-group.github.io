@@ -232,7 +232,7 @@ $(document).ready(() => {
 				'email': $("#email").val(),
 				'phone': $("#phno").val(),
 				'prn': $("#prn").val(),
-				'faculty': $("#faculty").val(),
+				'faculty': $("#faculty").val().replace(',', ''),
 				'school': $("#school").val(),
 				'program': $("#program").val(),
 				'year': $("#year").val(),
