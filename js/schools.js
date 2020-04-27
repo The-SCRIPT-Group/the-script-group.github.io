@@ -19,8 +19,8 @@ let schoolsData = {
         ["economics","School of Economics"]
     ],
     "Management": [
-        ["management-ug","School of Management(UG)"],
-        ["management-pg","School of Management(PG)"]
+        ["management-ug","(UG) School of Management"],
+        ["management-pg","(PG) School of Management"]
 
     ],
     "Science":[

@@ -1,48 +1,48 @@
 $(document).ready(() => {
-	$('select').on('contentChanged', function () {
-		$(this).formSelect();
-		$('.select-dropdown').addClass('white-text');
-		$('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
-	});
-	$('#modal').modal();
+  $('select').on('contentChanged', function () {
+    $(this).formSelect();
+    $('.select-dropdown').addClass('white-text');
+    $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
+  });
+  $('#modal').modal();
 
-	$("#reg-form").on("reset", () => {
-		$(".clogo").slideDown();
-		$(".field").slideUp();
-		$(".f2").slideUp();
-	})
+  $("#reg-form").on("reset", () => {
+    $(".clogo").slideDown();
+    $(".field").slideUp();
+    $(".f2").slideUp();
+  })
 
-	$("#faculty").on('change', () => {
-		if ($("#faculty").val() !== "")
-			getSchools();
-	})
+  $("#faculty").on('change', () => {
+    if ($("#faculty").val() !== "")
+      getSchools();
+  })
 
-	$("#school").on('change', () => {
-		getPrograms();
-	})
+  $("#school").on('change', () => {
+    getPrograms();
+  })
 
-	$("#name,#prn").on('focus', () => {
-		$(".clogo").slideUp();
-		$(".f2").slideDown();
+  $("#name,#prn").on('focus', () => {
+    $(".clogo").slideUp();
+    $(".f2").slideDown();
 
-	});
+  });
 
-		facultiesData.forEach(element => {
-			$("#faculty").append(`<option value='${element}'>${element}</option>`);
-		});
+  facultiesData.forEach(element => {
+    $("#faculty").append(`<option value='${element}'>${element}</option>`);
+  });
 
-		$('#faculty').trigger('contentChanged');
+  $('#faculty').trigger('contentChanged');
 
-	$('select').formSelect();
-	$('.select-dropdown').addClass('white-text');
-	$('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
+  $('select').formSelect();
+  $('.select-dropdown').addClass('white-text');
+  $('.dropdown-content').css('background', 'rgba(25, 28, 29, 0.95)');
 
-	$("#reg-form").on('submit', e => {
-		e.preventDefault();
-		let validflag = true;
-		validflag = validate();
-		if (validflag) {
-			let email_content = `
+  $("#reg-form").on('submit', e => {
+    e.preventDefault();
+    let validflag = true;
+    validflag = validate();
+    if (validflag) {
+      let email_content = `
         <!doctype html>
 <html>
   <head>
@@ -139,7 +139,7 @@ $(document).ready(() => {
     }
     </style>
   </head>`
-			let email_formattable_content = `
+      let email_formattable_content = `
   <body class="" style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
     <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
       <tr>
@@ -161,7 +161,7 @@ $(document).ready(() => {
                         </p>
                         <br/><br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there, {name}</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group. Use the button below to enable your subscription.</p>
+                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thank you for registering for the Coursera courses sponsored by MIT-WPU, powered by The S.C.R.I.P.T. Group. Your response has been recorded and you will soon receive an email for registration.</p>
                         <br/>
                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your subscription will be enabled for<b> {email}</b>.</p>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin: 0; Margin-bottom: 15px;">DETAILS:</p>
@@ -183,7 +183,7 @@ $(document).ready(() => {
                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://www.coursera.org/programs/mit-wpu-0o0ug/" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">sign up</a> </td>
+                                      
                                     </tr>
                                   </tbody>
                                 </table>
@@ -242,79 +242,79 @@ $(document).ready(() => {
 				'no_qr': '',
 			}
 
-			$(".main-loader").css("display", "flex")
-			$.post("https://hades.thescriptgroup.in/submit",
-				data,
-				(data, status) => {
-					$(".main-loader").css("display", "none")
-					var instance = M.Modal.getInstance($("#modal"));
-					$(".modal-content").html(data);
+      $(".main-loader").css("display", "flex")
+      $.post("https://hades.thescriptgroup.in/submit",
+        data,
+        (data, status) => {
+          $(".main-loader").css("display", "none")
+          var instance = M.Modal.getInstance($("#modal"));
+          $(".modal-content").html(data);
 
-					instance.open();
-					$("#reg-form").trigger("reset");
-				}
-			)
-		}
-	})
+          instance.open();
+          $("#reg-form").trigger("reset");
+        }
+      )
+    }
+  })
 });
 
 function getSchools() {
-			let faculty = $("#faculty").val();
-			$("#school").html("");
-			schoolsData[faculty].forEach((element, index) => {
-				$("#school").append(`<option value="${element[0]}"  >${element[1]}</option>`);
-			});
+  let faculty = $("#faculty").val();
+  $("#school").html("");
+  schoolsData[faculty].forEach((element, index) => {
+    $("#school").append(`<option value="${element[0]}"  >${element[1]}</option>`);
+  });
 
-			$('#school').trigger('contentChanged');
+  $('#school').trigger('contentChanged');
 
-	getPrograms();
+  getPrograms();
 
-	$('.field').slideDown();
+  $('.field').slideDown();
 
 }
 
 function getPrograms() {
 
-			let school = $("#school").val();
-			$("#program").html("");
-			programsData[school].forEach(element => {
-				$("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
-			});
-	// $.getJSON("js/programs.json", data => {
-	// 	let school = $("#school").val();
-	// 	$("#program").html("");
-	// 	data[school].forEach(element => {
-	// 		$("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
-	// 	});
+  let school = $("#school").val();
+  $("#program").html("");
+  programsData[school].forEach(element => {
+    $("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
+  });
+  // $.getJSON("js/programs.json", data => {
+  // 	let school = $("#school").val();
+  // 	$("#program").html("");
+  // 	data[school].forEach(element => {
+  // 		$("#program").append(`<option value="${element[0]}" >${element[1]}</option>`);
+  // 	});
 
-	 	$('#program').trigger('contentChanged');
-	// })
+  $('#program').trigger('contentChanged');
+  // })
 }
 
 function validate() {
-	var res = true;
+  var res = true;
 
-	if ($("#name").val().split(" ").length <= 1) {
-		M.toast({ html: "Please enter full name" });
-		res = false;
-	}
+  if ($("#name").val().trim().split(/\s+/).length <= 1) {
+    M.toast({ html: "Please enter full name" });
+    res = false;
+  }
 
-	if ($("#faculty").val() == "") {
-		M.toast({ html: "Please select Faculty" });
-		res = false;
-	}
+  if ($("#faculty").val() == "") {
+    M.toast({ html: "Please select Faculty" });
+    res = false;
+  }
 
-	let phone = $("#phno").val();
-	if (phone.length != 10 || phone.match(/^\d+$/) == null) {
-		M.toast({ html: "Please enter the correct phone number" });
-		res = false;
-	}
+  let phone = $("#phno").val();
+  if (phone.length != 10 || phone.match(/^\d+$/) == null) {
+    M.toast({ html: "Please enter the correct phone number" });
+    res = false;
+  }
 
-	let prn = $("#prn").val()
-	if (prn.length != 10 || prn.match(/^\d{10}$/) == null) {
-		M.toast({ html: "Please enter the correct PRN! Remember, your PRN consists only of numbers." });
-		res = false;
-	}
+  let prn = $("#prn").val()
+  if (prn.length != 10 || prn.match(/^\d{10}$/) == null) {
+    M.toast({ html: "Please enter the correct PRN! Remember, your PRN consists only of numbers." });
+    res = false;
+  }
 
-	return res;
+  return res;
 }
