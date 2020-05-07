@@ -319,7 +319,7 @@ function validate() {
   console.log("dada")
   if (email.includes("mitwpu")) {
     console.log("dada")
-    M.toast({html:`Error: faculty details have to be filled <a href="https://forms.gle/iZaEi1J2zAeMpi8y7" target="_top">here</a>`})
+    M.toast({html:`Error: faculty details have to be filled &nbsp<a href="https://forms.gle/iZaEi1J2zAeMpi8y7" target="_top">here</a>`})
     res=false;
   }
   return res;
