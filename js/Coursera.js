@@ -315,6 +315,12 @@ function validate() {
     M.toast({ html: "Please enter the correct PRN! Remember, your PRN consists only of numbers." });
     res = false;
   }
-
+  let email = $("#email").val()
+  console.log("dada")
+  if (email.includes("mitwpu")) {
+    console.log("dada")
+    M.toast({html:`Error: faculty details have to be filled <a href="https://forms.gle/iZaEi1J2zAeMpi8y7" target="_top">here</a>`})
+    res=false;
+  }
   return res;
 }
