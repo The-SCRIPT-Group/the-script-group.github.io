@@ -316,9 +316,7 @@ function validate() {
     res = false;
   }
   let email = $("#email").val()
-  console.log("dada")
   if (email.includes("mitwpu")) {
-    console.log("dada")
     M.toast({html:`Error: faculty details have to be filled &nbsp<a href="https://forms.gle/iZaEi1J2zAeMpi8y7" target="_top">here</a>`})
     res=false;
   }
