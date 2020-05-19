@@ -9,7 +9,7 @@ iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -22,14 +22,15 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-#write li > figure:first-child { margin-top: -20px; }
+#write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
@@ -87,7 +88,6 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
   .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -136,97 +136,376 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 
-:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
-html { font-size: 16px; }
-body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
-#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
-#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
-a { color: rgb(65, 131, 196); }
-h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
-h1 tt, h1 code { font-size: inherit; }
-h2 tt, h2 code { font-size: inherit; }
-h3 tt, h3 code { font-size: inherit; }
-h4 tt, h4 code { font-size: inherit; }
-h5 tt, h5 code { font-size: inherit; }
-h6 tt, h6 code { font-size: inherit; }
-h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-h3 { font-size: 1.5em; line-height: 1.43; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; color: rgb(119, 119, 119); }
-p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
-li > ol, li > ul { margin: 0px; }
-hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
-li p.first { display: inline-block; }
-ul, ol { padding-left: 30px; }
-ul:first-child, ol:first-child { margin-top: 0px; }
-ul:last-child, ol:last-child { margin-bottom: 0px; }
-blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
-blockquote blockquote { padding-right: 0px; }
-table { padding: 0px; word-break: initial; }
-table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
-table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr th:first-child, table tr td:first-child { margin-top: 0px; }
-table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
-.CodeMirror-lines { padding-left: 4px; }
-.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
-.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
-code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
-.md-task-list-item > input { margin-left: -1.3em; }
-@media print {
-  html { font-size: 13px; }
-  table, pre { break-inside: avoid; }
-  pre { word-wrap: break-word; }
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
 }
-.md-fences { background-color: rgb(248, 248, 248); }
-#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
-.mathjax-block > .code-tooltip { bottom: 0.375rem; }
-.md-mathjax-midline { background: rgb(250, 250, 250); }
-#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
-#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
-.md-tag { color: rgb(167, 167, 167); opacity: 1; }
-.md-toc { margin-top: 20px; padding-bottom: 20px; }
-.sidebar-tabs { border-bottom: none; }
-#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
-#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
-.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
-header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
-.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
-.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
-.md-lang { color: rgb(180, 101, 77); }
-.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
-#md-notification .btn { border: 0px; }
-.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
 
 
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
 
 
-
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-node'><h1><a name='header-n2' class='md-header-anchor '></a>PRIVACY POLICY</h1><h3><a name='header-n3' class='md-header-anchor '></a>INTRODUCTION</h3><p>The S.C.R.I.P.T Group (“we” or “us”) values its visitors’ privacy. This privacy policy is effective from 04/11/2019; it summarizes what information we might collect from a person who has registered for our events (competitions / workshops) or for events in which we provide services, or other visitor (“you”) before or during such events, and what we will and will not do with it.</p><p>Please note that this privacy policy does not govern the collection and use of information by companies or groups that The S.C.R.I.P.T Group does not control, nor by individuals not employed or managed by The S.C.R.I.P.T Group. If you visit a website that we mention or link to, be sure to review its privacy policy before providing the site with information.</p><h3><a name='header-n6' class='md-header-anchor '></a>WHAT WE DO WITH YOUR PERSONALLY IDENTIFIABLE INFORMATION</h3><p>It is always up to you whether to disclose personally identifiable information to us, although if you elect not to do so, we reserve the right not to register you as a participant/attendee or provide you with any products or services. “<em>Personally identifiable information</em>” means information that can be used to identify you as an individual, such as, for example:</p><ul><li>your name, email address, phone number, course details</li></ul><p>If you do provide personally identifiable information to us, either directly or through one of our members, we will:</p><ul><li><p>not sell/rent/share it to or with a third party without your permission — although unless you opt out (see below), we may use your contact information to provide you with information we believe you need to know or may find useful, such as (for example) news about our services and products and modifications to the Terms of Service and/or this Privacy Policy;</p></li><li><p>take reasonable precautions to protect the information from loss, misuse and unauthorized access, disclosure, alteration and destruction;</p></li><li><p>not use or disclose the information except:</p><ul><li>as necessary to provide services or products you have ordered or asked for, such as (for example) by providing it to one of our members in-charge of  delivering products or services you have ordered;</li><li>in other ways described in this privacy policy or to which you have otherwise consented;</li><li>in the aggregate with other information in such a way so that your identity cannot reasonably be determined (for example, statistical compilations);</li><li>as required by law, for example, in response to a subpoena or search warrant;</li><li>to outside auditors who have agreed to keep the information confidential;</li><li>as necessary to enforce the Terms of Service;</li><li>as necessary to protect the rights, safety, or property of The S.C.R.I.P.T Group, its users, or others; this may include (for example) exchanging information with other organisations for fraud protection and/or risk reduction.</li></ul></li></ul><h3><a name='header-n34' class='md-header-anchor '></a>OTHER INFORMATION WE COLLECT</h3><p>We may collect other information that cannot be readily used to identify you, such as (for example) the domain name and IP address of your computer. We may use this information, individually or in the aggregate, for technical administration of our website(s); research and development; people and account administration; and to help us focus our marketing efforts more precisely.</p><p>We may also collect visual information (in the form of photos/selfies/videos/snaps etc), before or during our events/competitions as may be required by us for marketing and promotional purposes. All such created media is owned by The S.C.R.I.P.T Group, and may be distributed by us, across our media channels online or offline. However, we shall try to ensure none of these can be used to trace you directly. If you have any issues with any media content owned by us, please raise a concern at <a href='mailto:support@thescriptgroup.in' target="_blank" class="url">support@thescriptgroup.in</a>.</p><h3><a name='header-n37' class='md-header-anchor '></a>COOKIES</h3><p>The S.C.R.I.P.T Group’s website(s) (hosted on WordPress.com and GitHub) uses “cookies” (managed by WordPress), and not on our new site, to store personal data on your computer. We may also link information stored on your computer in cookies with personal data about specific individuals stored on WordPress servers. If you set up your Web browser (for example, Internet Explorer or Firefox) so that cookies are not allowed, you might not be able to use some or all of the features of our website(s).</p><h3><a name='header-n39' class='md-header-anchor '></a>EXTERNAL DATA STORAGE SITES</h3><p>We may store your data on servers provided by third party hosting vendors with whom we have contracted or use for our administration.</p><h3><a name='header-n41' class='md-header-anchor '></a>YOUR PRIVACY RESPONSIBILITIES</h3><p>To help protect your privacy, be sure:</p><ul><li>not to share your unique codes with anyone</li><li>to take customary precautions to guard against “malware” (viruses, Trojan horses, bots, etc.), for example by installing and updating suitable anti-virus software.</li></ul><h3><a name='header-n48' class='md-header-anchor '></a>INFORMATION COLLECTED FROM CHILDREN</h3><p>You must be at least 13 years old to use The S.C.R.I.P.T Group’s website(s) and service(s). The S.C.R.I.P.T Group does not knowingly collect information from children under 13.</p><h3><a name='header-n50' class='md-header-anchor '></a>CHANGES TO THIS PRIVACY POLICY</h3><p>We reserve the right to change this privacy policy as we deem necessary or appropriate because of legal compliance requirements or changes in our practices. If you have provided us with an email address, we will endeavour to notify you, by email to that address, of any material change to how we will use personally identifiable information, as may be necessary.</p><h3><a name='header-n52' class='md-header-anchor '></a>QUESTIONS OR COMMENTS?</h3><p>If you have questions or comments about The S.C.R.I.P.T Group’s privacy policy, send an email to <a href='mailto:support@thescriptgroup.in' target='_blank' class='url'>support@thescriptgroup.in</a>.</p><p>Thank you for believing in The S.C.R.I.P.T Group!</p></div>
+<div  id='write'  class = 'is-node'><h1><a name="privacy-policy" class="md-header-anchor"></a><span>PRIVACY POLICY</span></h1><h3><a name="introduction" class="md-header-anchor"></a><span>INTRODUCTION</span></h3><p><span>The  S.C.R.I.P.T Group (“we” or “us”) values its visitors’ privacy. This  privacy policy is effective from 16/05/2020; it summarizes what  information we might collect from a person who has registered for our  events (competitions / workshops) or for events in which we provide  services, or other visitor (“you”) before or during such events, or users of our online services and applications, and  what we will and will not do with it.</span></p><p><span>Please note that this privacy policy does not govern the collection and use of information by individuals, groups or companies that are not part of or controlled by The S.C.R.I.P.T Group. If you visit a website that we mention or link to, be sure to review its privacy policy before providing the site with any information.</span></p><h3><a name="what-we-do-with-your-personally-identifiable-information" class="md-header-anchor"></a><span>WHAT WE DO WITH YOUR PERSONALLY IDENTIFIABLE INFORMATION</span></h3><p><span>It  is always up to you whether to disclose personally identifiable  information to us, although if you elect not to do so, we reserve the  right not to register you as a participant/attendee or provide you with  any products or services. “</span><em><span>Personally identifiable information</span></em><span>” means information that can be used to identify you as an individual, such as, for example:</span></p><ul><li><span>your name, email address, phone number, course details, etc.</span></li></ul><p><span>If you do provide personally identifiable information to us, either directly or through one of our members, we will:</span></p><ul><li><p><span>not  sell/rent/share it to or with a third party without your permission —  although unless you opt out (see below), we may use your contact  information to provide you with information we believe you need to know  or may find useful, such as (for example) news about our services and  products and modifications to the Terms of Service and/or this Privacy  Policy.</span></p></li><li><p><span>take reasonable precautions to protect the  information from loss, misuse and unauthorized access, disclosure,  alteration and destruction.</span></p></li><li><p><span>not use or disclose the information except:</span></p><ul><li><span>as  necessary to provide services or products you have ordered or asked  for, such as (for example) by providing it to one of our members  in-charge of  delivering products or services you have ordered.</span></li><li><span>in other ways described in this privacy policy or to which you have otherwise consented.</span></li><li><span>in  the aggregate with other information in such a way so that your  identity cannot reasonably be determined (for example, statistical  compilations).</span></li><li><span>as required by law, for example, in response to a subpoena or search warrant.</span></li><li><span>to outside auditors who have agreed to keep the information confidential.</span></li><li><span>as necessary to enforce the Terms of Service.</span></li><li><span>as  necessary to protect the rights, safety, or property of The S.C.R.I.P.T  Group, its users, or others; this may include (for example) exchanging  information with other organizations for fraud protection and/or risk  reduction.</span></li></ul></li></ul><h3><a name="other-information-we-collect" class="md-header-anchor"></a><span>OTHER INFORMATION WE COLLECT</span></h3><p><span>We  may collect other information that cannot be readily used to identify  you, such as (for example) the domain name and IP address of your  computer. We may use this information, individually or in the aggregate,  for technical administration of our website(s); research and  development; people and account administration; and to help us focus our  marketing efforts more precisely.</span></p><p><span>We may also collect visual  information (in the form of photos/selfies/videos/snaps etc.), before or  during our events/competitions as may be required by us for marketing  and promotional purposes. All such created media is owned by The  S.C.R.I.P.T Group, and may be distributed by us, across our media  channels online or offline. However, we shall try to ensure none of  these can be used to trace you directly. If you have any issues with any  media content owned by us, please raise a concern at </span><a href='mailto:support@thescriptgroup.in'><span>support@thescriptgroup.in</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="app-specific-information-collected" class="md-header-anchor"></a><span>APP-SPECIFIC INFORMATION COLLECTED</span></h3><p><span>This section adheres to the information collected through our Attendance MIT-WPU Android application.</span></p><h5><a name="firebase-data-collected" class="md-header-anchor"></a><span>Firebase Data collected:</span></h5><p><span>The application includes Firebase, with the following configured services:</span></p><ul><li><p><span>Firebase Cloud Messaging - collects Instance IDs from your device, which is retained till we specifically delete it</span></p></li><li><p><span>Google Analytics (Firebase) - Google uses Google Analytics data to provide us with the Google Analytics measurement service. Identifiers such as cookies and app instance IDs are used to measure user interactions with a customer’s sites and/or apps, while IP addresses are used to provide and protect the security of the service, and to give us a sense of where in the world our users come from.</span></p><ul><li><strong><span>First Party Cookies:</span></strong><span> Google Analytics collects first-party cookies, data related to the </span>
+<span>device/browser, IP address and on-site/app activities to measure and report statistics about user interactions on the websites and/or apps that use Google Analytics.</span></li><li><strong><span>IP Address:</span></strong><span> Google Analytics uses IP addresses to derive the geolocation of a </span>
+<span>visitor, and to protect our app service and provide security to us. We may apply </span><a href='https://support.google.com/analytics/answer/2905384/'><span>IP masking</span></a><span> so that Google Analytics uses only a portion of an IP address collected, rather than the entire address. In addition, we can override IPs at will using our </span><a href='https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#uip'><span>IP Override feature</span></a><span>.</span></li></ul></li></ul><h5><a name="non-firebase-data-collected" class="md-header-anchor"></a><span>Non-Firebase Data collected:</span></h5><p><span>In the highly unusual scenario of a captcha resolution failure several times, we collect your PRN number (ERP username), captcha details along with the error page returned by the ERP server in order to track and resolve parsing issues on our side, if any. </span></p><h3><a name="cookies" class="md-header-anchor"></a><span>COOKIES</span></h3><p><span>The S.C.R.I.P.T Group’s website(s) uses “cookies” to store personal data on your computer. We may also link information stored on your computer in cookies with personal data about specific individuals stored on servers rented, owned or controlled by The S.C.R.I.P.T Group. If you set up your Web browser (for example, Internet Explorer or Firefox) so that cookies are not allowed, you might not be able to use some or all of the features of our website(s).</span></p><h3><a name="external-data-storage-sites" class="md-header-anchor"></a><span>EXTERNAL DATA STORAGE SITES</span></h3><p><span>We  may store your data on servers provided by third party hosting vendors  with whom we have contracted or use(d)for our administration.</span></p><h3><a name="your-privacy-responsibilities" class="md-header-anchor"></a><span>YOUR PRIVACY RESPONSIBILITIES</span></h3><p><span>To help protect your privacy, be sure:</span></p><ul><li><span>not to share your unique codes with anyone</span></li><li><span>to  take customary precautions to guard against “malware” (viruses, Trojan  horses, bots, etc.), for example by installing and updating suitable  anti-virus software.</span></li></ul><h3><a name="information-collected-from-children" class="md-header-anchor"></a><span>INFORMATION COLLECTED FROM CHILDREN</span></h3><p><span>You  must be at least 13 years old to use The S.C.R.I.P.T Group’s website(s)  and service(s). The S.C.R.I.P.T Group does not knowingly collect  information from children under 13.</span></p><h3><a name="changes-to-this-privacy-policy" class="md-header-anchor"></a><span>CHANGES TO THIS PRIVACY POLICY</span></h3><p><span>We  reserve the right to change this privacy policy as we deem necessary or  appropriate because of legal compliance requirements or changes in our  practices. If you have provided us with an email address, we will  endeavour to notify you, by email to that address, of any material  change to how we will use personally identifiable information, as may be  necessary.</span></p><h3><a name="questions-or-comments" class="md-header-anchor"></a><span>QUESTIONS OR COMMENTS?</span></h3><p><span>If you have questions or comments about The S.C.R.I.P.T Group’s privacy policy, send an email to </span><a href='mailto:support@thescriptgroup.in'><span>support@thescriptgroup.in</span></a><span>.</span></p><p><span>Thank you for believing in The S.C.R.I.P.T Group!</span></p></div>
 </body>
 </html>

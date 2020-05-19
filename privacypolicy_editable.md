@@ -2,27 +2,27 @@
 
 ### INTRODUCTION
 
-The  S.C.R.I.P.T Group (“we” or “us”) values its visitors’ privacy. This  privacy policy is effective from 29/03/2020; it summarizes what  information we might collect from a person who has registered for our  events (competitions / workshops) or for events in which we provide  services, or other visitor (“you”) before or during such events, or users of our online services and applications, and  what we will and will not do with it.
+The  S.C.R.I.P.T Group (“we” or “us”) values its visitors’ privacy. This  privacy policy is effective from 16/05/2020; it summarizes what  information we might collect from a person who has registered for our  events (competitions / workshops) or for events in which we provide  services, or other visitor (“you”) before or during such events, or users of our online services and applications, and  what we will and will not do with it.
 
-Please note that this  privacy policy does not govern the collection and use of information by  companies or groups that The S.C.R.I.P.T Group does not control, nor by  individuals not employed or managed by The S.C.R.I.P.T Group. If you  visit a website that we mention or link to, be sure to review its  privacy policy before providing the site with information.
+Please note that this privacy policy does not govern the collection and use of information by individuals, groups or companies that are not part of or controlled by The S.C.R.I.P.T Group. If you visit a website that we mention or link to, be sure to review its privacy policy before providing the site with any information.
 
 ### WHAT WE DO WITH YOUR PERSONALLY IDENTIFIABLE INFORMATION
 
 It  is always up to you whether to disclose personally identifiable  information to us, although if you elect not to do so, we reserve the  right not to register you as a participant/attendee or provide you with  any products or services. “*Personally identifiable information*” means information that can be used to identify you as an individual, such as, for example:
 
-- your name, email address, phone number, course details
+- your name, email address, phone number, course details, etc.
 
 If you do provide personally identifiable information to us, either directly or through one of our members, we will:
 
-- not  sell/rent/share it to or with a third party without your permission —  although unless you opt out (see below), we may use your contact  information to provide you with information we believe you need to know  or may find useful, such as (for example) news about our services and  products and modifications to the Terms of Service and/or this Privacy  Policy;
-- take reasonable precautions to protect the  information from loss, misuse and unauthorized access, disclosure,  alteration and destruction;
+- not  sell/rent/share it to or with a third party without your permission —  although unless you opt out (see below), we may use your contact  information to provide you with information we believe you need to know  or may find useful, such as (for example) news about our services and  products and modifications to the Terms of Service and/or this Privacy  Policy.
+- take reasonable precautions to protect the  information from loss, misuse and unauthorized access, disclosure,  alteration and destruction.
 - not use or disclose the information except:
-  - as  necessary to provide services or products you have ordered or asked  for, such as (for example) by providing it to one of our members  in-charge of  delivering products or services you have ordered;
-  - in other ways described in this privacy policy or to which you have otherwise consented;
-  - in  the aggregate with other information in such a way so that your  identity cannot reasonably be determined (for example, statistical  compilations);
-  - as required by law, for example, in response to a subpoena or search warrant;
-  - to outside auditors who have agreed to keep the information confidential;
-  - as necessary to enforce the Terms of Service;
+  - as  necessary to provide services or products you have ordered or asked  for, such as (for example) by providing it to one of our members  in-charge of  delivering products or services you have ordered.
+  - in other ways described in this privacy policy or to which you have otherwise consented.
+  - in  the aggregate with other information in such a way so that your  identity cannot reasonably be determined (for example, statistical  compilations).
+  - as required by law, for example, in response to a subpoena or search warrant.
+  - to outside auditors who have agreed to keep the information confidential.
+  - as necessary to enforce the Terms of Service.
   - as  necessary to protect the rights, safety, or property of The S.C.R.I.P.T  Group, its users, or others; this may include (for example) exchanging  information with other organizations for fraud protection and/or risk  reduction.
 
 ### OTHER INFORMATION WE COLLECT
@@ -42,7 +42,7 @@ This section adheres to the information collected through our Attendance MIT-WPU
 The application includes Firebase, with the following configured services:
 
 - Firebase Cloud Messaging - collects Instance IDs from your device, which is retained till we specifically delete it
-- Google Analytics (Firebase) - Google uses Google Analytics data to provide us Google Analytics measurement service. Identifiers such as cookies and app instance IDs are used to measure user interactions with a customer’s sites and/or apps, while IP addresses are used to provide and protect the security of the service, and to give us a sense of where in the world our users come from.
+- Google Analytics (Firebase) - Google uses Google Analytics data to provide us with the Google Analytics measurement service. Identifiers such as cookies and app instance IDs are used to measure user interactions with a customer’s sites and/or apps, while IP addresses are used to provide and protect the security of the service, and to give us a sense of where in the world our users come from.
   - **First Party Cookies:** Google Analytics collects first-party cookies, data related to the 
     device/browser, IP address and on-site/app activities to measure and report statistics about user interactions on the websites and/or apps that use Google Analytics.
   - **IP Address:** Google Analytics uses IP addresses to derive the geolocation of a 
@@ -54,11 +54,11 @@ In the highly unusual scenario of a captcha resolution failure several times, we
 
 ### COOKIES
 
-The  S.C.R.I.P.T Group’s website(s) (hosted on WordPress.com and GitHub)  uses “cookies” (managed by WordPress), and not on our new site, to store  personal data on your computer. We may also link information stored on  your computer in cookies with personal data about specific individuals  stored on WordPress servers. If you set up your Web browser (for  example, Internet Explorer or Firefox) so that cookies are not allowed,  you might not be able to use some or all of the features of our  website(s).
+The S.C.R.I.P.T Group’s website(s) uses “cookies” to store personal data on your computer. We may also link information stored on your computer in cookies with personal data about specific individuals stored on servers rented, owned or controlled by The S.C.R.I.P.T Group. If you set up your Web browser (for example, Internet Explorer or Firefox) so that cookies are not allowed, you might not be able to use some or all of the features of our website(s).
 
 ### EXTERNAL DATA STORAGE SITES
 
-We  may store your data on servers provided by third party hosting vendors  with whom we have contracted or use for our administration.
+We  may store your data on servers provided by third party hosting vendors  with whom we have contracted or use(d)for our administration.
 
 ### YOUR PRIVACY RESPONSIBILITIES
 
