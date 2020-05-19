@@ -367,6 +367,10 @@ let programsData = {
         [
             "ba-photography",
             "BA Photography"
+        ],
+        [
+            "diploma-photography",
+            "Diploma in Photography"
         ]
     ],
     "law": [
