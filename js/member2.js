@@ -28,20 +28,6 @@ const members = [
         'link3': 'https://github.com/aniket1020'
     },
     {
-        'name': 'Amruta Nandargi',
-        'img': 'images/amruta.jpg',
-        'title': 'Management',
-        'desc': `A second year student, Amruta is eager to learn new things in the field
-        of computer science.
-        She is a management whiz and an amazing singer!`,
-        'link1-class': 'fab fa-instagram',
-        'link1': 'https://instagram.com/amruta_n__',
-        'link2-class': 'fas fa-globe-asia',
-        'link2': 'http://www.aniketraj.co/',
-        'link3-class': 'icon-github',
-        'link3': 'https://github.com/amruta-n'
-    },
-    {
         'name': 'Omkar Chandorkar',
         'img': 'images/omkar.jpg',
         'title': 'Tech Member',
