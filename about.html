@@ -6,7 +6,10 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149853301-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-149853301-1');
@@ -180,7 +183,26 @@
 		}
 
 		.ex-members {
-			height:300px
+			height: 300px
+		}
+
+		input[type=text] {
+			width: 130px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: white;
+			background-image: url('images/searchicon.png');
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			padding: 12px 20px 12px 40px;
+			-webkit-transition: width 0.4s ease-in-out;
+			transition: width 0.4s ease-in-out;
+		}
+
+		input[type=text]:focus {
+			width: 100%;
 		}
 	</style>
 	<!-- End demo purposes only -->
@@ -200,8 +222,9 @@
 					<!-- Mobile Toggle Menu Button -->
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse"
 						data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-					<a class="navbar-brand" style="color: black;" href="index.html"><span class="brackets">{&nbsp&nbsp</span><span
-							id="head">S<span style="font-size: 12px;"> . </span>C<span style="font-size: 12px;"> .
+					<a class="navbar-brand" style="color: black;" href="index.html"><span
+							class="brackets">{&nbsp&nbsp</span><span id="head">S<span style="font-size: 12px;"> .
+							</span>C<span style="font-size: 12px;"> .
 							</span>R<span style="font-size: 12px;"> . </span>I<span style="font-size: 12px;"> .
 							</span>P<span style="font-size: 12px;"> . </span>T</span><span
 							class="brackets">&nbsp}</span></a>
@@ -225,6 +248,7 @@
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
 					<h2 class="to-animate">Our Team</h2>
+					<input type="text" name="search" placeholder="Search.." id="memberSearch" oninput="applyFilter();">
 				</div>
 			</div>
 		</div>
@@ -353,8 +377,8 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Google Map -->
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false">
+	</script>
 	<script src="js/google_map.js"></script>
 
 	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
@@ -365,8 +389,7 @@
 			winWidth = $(window).width();
 			if (winWidth <= 768) {
 				$(".hide-card").css("display", "none");
-			}
-			else {
+			} else {
 				$(".hide-card").css("display", "block");
 			}
 		});
@@ -387,6 +410,14 @@
 				$('#colour-variations').toggleClass('sleep');
 			});
 		});
+
+		function applyFilter() {
+			let value = $('#memberSearch').val().toLowerCase();
+			filteredMembers = shuffledMembers.filter(element => 
+				element.name.toLowerCase().includes(value)
+			);
+			renderCards(filteredMembers);
+		}
 	</script>
 	<script src="js/members.js"></script>
 	<script src="js/about_randomiser.js"></script>
