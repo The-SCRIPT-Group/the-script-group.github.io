@@ -326,15 +326,16 @@ const members = [{
     {
         'name': 'Pranav Bakre',
         'img': 'images/pranav.PNG',
-        'title': 'Lead Developer',
-        'desc': `Pizza lover, and GitHub pusher - Akhil is our Hulk in size and The Flash
-        in coding!`,
+        'title': 'Lead Web Developer',
+        'desc': `Tech lover, pretty much stuck in OS and trivia - Pranav is our
+        installation guru, and our
+        most straightforward member! Without him, we would forget half of our assigments :\\`,
         'link1-class': 'fab fa-linkedin',
-        'link1': 'https://www.linkedin.com/in/akhilnarang',
-        'link2-class': 'fas fa-globe-asia',
-        'link2': 'https://akhilnarang.dev',
-        'link3-class': 'icon-github',
-        'link3': 'https://github.com/akhilnarang'
+        'link1': 'https://www.linkedin.com/in/pranav-bakre-32982118a/',
+        'link2-class': 'icon-github',
+        'link2': 'https://github.com/PranavBakre',
+        'link3-class': '',
+        'link3': ''
     },
     {
         'name': 'Pratik Gorade',
