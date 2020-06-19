@@ -204,8 +204,8 @@ const members = [{
         'desc': `A passionate coder, with a knack for management, Devesh can manage a
         variety of stuff, and
         helps us maintain our relations with MIT-WPU`,
-        'link1-class': 'fab fa-facebook',
-        'link1': 'https://www.facebook.com/devesh.bhogre',
+        'link1-class': 'fab fa-linkedin',
+        'link1': 'https://www.linkedin.com/in/devesh-bhogre-953b02b3/',
         'link2-class': 'icon-twitter',
         'link2': 'https://www.twitter.com/DBhogre/',
         'link3-class': 'fab fa-instagram',
@@ -473,10 +473,10 @@ const members = [{
         'desc': `The silent and dependable founder of S.C.R.I.P.T, Vignesh is our finance
         head and chief
         advisor. That he spends time on Quora, should suffice for this caption.`,
-        'link1-class': 'fab fa-instagram',
-        'link1': 'https://www.instagram.com/the_viggyboy/',
+        'link1-class': 'fab fa-linkedin',
+        'link1': 'https://www.linkedin.com/in/vignesh-hariharan-iyer-701967192/',
         'link2-class': 'icon-twitter',
-        'link2': 'https://twitter.com/logical_vhi?s=08',
+        'link2': 'https://twitter.com/vigucodes',
         'link3-class': 'icon-github',
         'link3': 'https://github.com/vigu184'
     },
