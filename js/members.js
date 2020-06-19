@@ -200,10 +200,10 @@ const members = [{
     {
         'name': 'Devesh Bhogre',
         'img': 'images/devesh.jpg',
-        'title': 'Tech Member',
+        'title': 'University Relations',
         'desc': `A passionate coder, with a knack for management, Devesh can manage a
         variety of stuff, and
-        has a great contact when it comes to merchandise :)`,
+        helps us maintain our relations with MIT-WPU`,
         'link1-class': 'fab fa-facebook',
         'link1': 'https://www.facebook.com/devesh.bhogre',
         'link2-class': 'icon-twitter',
