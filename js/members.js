@@ -200,7 +200,7 @@ const members = [{
     {
         'name': 'Devesh Bhogre',
         'img': 'images/devesh.jpg',
-        'title': 'University Relations',
+        'title': 'University Relations Manager',
         'desc': `A passionate coder, with a knack for management, Devesh can manage a
         variety of stuff, and
         helps us maintain our relations with MIT-WPU`,
