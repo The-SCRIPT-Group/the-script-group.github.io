@@ -16,7 +16,7 @@ const members = [{
     {
         'name': 'Aditya Desai',
         'img': 'images/Aditya.png',
-        'title': 'Core Member',
+        'title': 'Lead Front End Developer',
         'desc': `Debugger and Japanese maniac - Aditya cannot sleep, with his code full of
         bugs.`,
         'link1-class': 'fab fa-instagram',
