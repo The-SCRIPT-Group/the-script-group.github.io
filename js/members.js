@@ -254,7 +254,7 @@ const members = [{
     {
         'name': 'Kshitish Deshpande',
         'img': 'images/ksdfg.jpg',
-        'title': 'Lead Developer',
+        'title': 'Lead Frontend Developer',
         'desc': `The shy, yet overconfident otaku of S.C.R.I.P.T - Kshitish coordinates
         the team in our
         events, and is an anime fan! Weirdly obsessed with cats though…`,
