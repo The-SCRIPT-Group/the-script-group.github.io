@@ -17,12 +17,15 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+
 # =========================
 # Operating System Files
 # =========================
-
 # OSX
 # =========================
+
+
 
 .DS_Store
 .AppleDouble
